@@ -191,7 +191,7 @@
 </head>
 <body>
 
-    <!-- 1. TOP BAR -->
+            <!-- 1. TOP BAR -->
     <div class="porto-topbar">
         <div class="container">
             <div class="topbar-inner">
@@ -205,9 +205,9 @@
                     <a href="about.html"><i class="fa-solid fa-leaf"></i> عن المتجر</a>
                     <a href="javascript:void(0)" onclick="toggleCartDrawer()"><i class="fa-solid fa-basket-shopping"></i> السلة</a>
                     <div class="topbar-socials">
-                        <a href="https://wa.me/201027093535" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://wa.me/201027093535" target="_blank" title="واتساب"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#" title="انستقرام"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" title="تويتر"><i class="fa-brands fa-x-twitter"></i></a>
                     </div>
                 </div>
             </div>
@@ -218,6 +218,7 @@
     <header class="porto-header">
         <div class="container">
             <div class="header-inner">
+                <!-- Logo -->
                 <a href="index.html" class="header-logo">
                     <div class="logo-text-box">
                         <h1>PORTO</h1>
@@ -225,8 +226,9 @@
                     </div>
                 </a>
 
-                <form class="header-search-form" action="shop.html" method="GET">
-                    <select class="search-category-select" name="cat">
+                <!-- Search Form -->
+                <form class="header-search-form" action="shop.html" method="GET" onsubmit="event.preventDefault(); triggerSearch(this);">
+                    <select class="search-category-select" name="cat" id="headerSearchCat">
                         <option value="all">جميع الأقسام</option>
                         <option value="veg">الخضروات العضوية</option>
                         <option value="fruits">الفواكه الطازجة</option>
@@ -238,8 +240,9 @@
                     <button type="submit" class="search-submit-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
 
+                <!-- Actions: Account & Cart -->
                 <div class="header-user-actions">
-                    <div class="user-account-box" onclick="showToast('مرحباً بك في بورتو أورجانيك! خدمة العملاء: 9200 99 888')">
+                    <div class="user-account-box" onclick="showToast('مرحباً بك في بورتو أورجانيك! خدمة العملاء: 01027093535')">
                         <i class="fa-regular fa-user"></i>
                         <div class="user-account-text">
                             <span>مرحباً بك</span>
@@ -262,29 +265,61 @@
         </div>
     </header>
 
-    <!-- 3. NAVIGATION BAR -->
+    <!-- MOBILE HEADER BAR (Sticky on Mobile) -->
+    <div class="mobile-header-bar">
+        <button class="mob-menu-toggle-btn" onclick="toggleMobileMenu()" aria-label="القائمة الرئيسية" title="القائمة الرئيسية">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <a href="index.html" class="logo-text-box" style="text-align:center; text-decoration:none; color:inherit;">
+            <h1 style="font-size:24px; font-weight:900; line-height:1; font-family:'Cairo'; margin:0;">PORTO</h1>
+            <span style="font-size:9.5px; font-weight:800; color:var(--porto-primary); letter-spacing:1px;">ORGANIC MARKET</span>
+        </a>
+        <div style="position:relative; cursor:pointer;" onclick="toggleCartDrawer()" title="سلة التسوق">
+            <i class="fa-solid fa-basket-shopping" style="font-size:22px; color:var(--porto-secondary);"></i>
+            <span class="cart-badge-count" id="mobCartCount">0</span>
+        </div>
+    </div>
+
+    <!-- 3. NAVIGATION BAR (Desktop with Sidebar Categories Dropdown) -->
     <nav class="porto-navbar">
         <div class="container">
             <div class="navbar-inner">
-                <div class="nav-links-menu">
-                    <a href="index.html" class="nav-item-link "><i class="fa-solid fa-house" style="margin-left:6px;"></i> الرئيسية</a>
-                    <a href="shop.html" class="nav-item-link ">المتجر الكامل</a>
-                    <a href="category.html?cat=veg" class="nav-item-link ">خضروات عضوية</a>
-                    <a href="category.html?cat=fruits" class="nav-item-link ">فواكه طازجة</a>
-                    <a href="category.html?cat=bakery" class="nav-item-link ">مخبوزات وإفطار</a>
-                    <a href="category.html?cat=cooking" class="nav-item-link ">مؤونة وتوابل</a>
-                    <a href="category.html?cat=meat" class="nav-item-link ">لحوم المراعي</a>
-                    <a href="about.html" class="nav-item-link ">عن المتجر</a>
-                    <a href="contact.html" class="nav-item-link ">اتصل بنا</a>
+                <!-- Dropdown on the right side: جميع الأقسام الغذائية -->
+                <div class="dept-dropdown-wrapper">
+                    <button class="dept-btn" type="button" onclick="this.parentElement.classList.toggle('open');">
+                        <i class="fa-solid fa-bars"></i>
+                        <span>جميع الأقسام الغذائية</span>
+                        <i class="fa-solid fa-chevron-down" style="font-size: 11px; margin-right: 8px;"></i>
+                    </button>
+                    <div class="dept-menu">
+                        <a href="category.html?cat=veg"><i class="fa-solid fa-carrot" style="color:var(--porto-primary); margin-left:8px;"></i> الخضروات العضوية <span>›</span></a>
+                        <a href="category.html?cat=fruits"><i class="fa-solid fa-apple-whole" style="color:#E53935; margin-left:8px;"></i> الفواكه الطازجة والموسمية <span>›</span></a>
+                        <a href="category.html?cat=bakery"><i class="fa-solid fa-wheat-awn" style="color:#FFA000; margin-left:8px;"></i> المخبوزات وإفطار الصباح <span>›</span></a>
+                        <a href="category.html?cat=cooking"><i class="fa-solid fa-jar" style="color:#8D6E63; margin-left:8px;"></i> زيوت الزيتون والمؤونة <span>›</span></a>
+                        <a href="category.html?cat=meat"><i class="fa-solid fa-drumstick-bite" style="color:#C2185B; margin-left:8px;"></i> لحوم ودواجن المراعي <span>›</span></a>
+                        <a href="shop.html?filter=deals" style="background:#FFF8E1; color:#D84315; font-weight:800;"><i class="fa-solid fa-fire" style="color:#E53935; margin-left:8px;"></i> عروض الأسبوع التوفيرية <span>%</span></a>
+                    </div>
                 </div>
 
-                <div class="nav-special-deal">
-                    <a href="shop.html?filter=deals"><i class="fa-solid fa-percent" style="margin-left:6px; color:#FFA000;"></i> عروض الأسبوع التوفيرية</a>
-                </div>
+                <!-- Nav links -->
+                <ul class="nav-links-list">
+                    <li><a href="index.html" class="">الرئيسية</a></li>
+                    <li><a href="shop.html" class="">المتجر الكامل</a></li>
+                    <li><a href="category.html?cat=veg" class="active">الخضار والفواكه</a></li>
+                    <li><a href="shop.html?filter=popular">الأكثر مبيعاً</a></li>
+                    <li><a href="shop.html?filter=deals">عروض الأسبوع</a></li>
+                    <li><a href="about.html" class="">عن المتجر</a></li>
+                    <li><a href="contact.html" class="">اتصل بنا</a></li>
+                </ul>
+
+                <!-- Special Offers Badge link -->
+                <a href="shop.html?filter=deals" class="special-offers-link">
+                    <i class="fa-solid fa-percent"></i>
+                    <span>عروض وتخفيضات حصرية</span>
+                </a>
             </div>
         </div>
     </nav>
-
 
     <section class="category-hero-banner" id="catHeroBanner">
         <img src="images/banner_fresh.jpg" alt="بانر القسم" class="category-banner-bg" id="catBannerImg">
@@ -494,5 +529,108 @@
             renderCategoryPage(currentCat);
         });
     </script>
+
+    
+
+
+    <!-- MOBILE MENU DRAWER (Slide-out Navigation) -->
+    <div class="mobile-menu-overlay" id="mobileDrawerOverlay" onclick="toggleMobileMenu()"></div>
+    <div class="mobile-menu-drawer" id="mobileMenuDrawer">
+        <div class="mob-drawer-header">
+            <div class="logo-text-box">
+                <h2 style="font-size:22px; font-weight:900; margin:0; line-height:1; font-family:'Cairo'; color:#222529;">PORTO</h2>
+                <span style="font-size:9px; font-weight:800; color:var(--porto-primary); letter-spacing:1px;">ORGANIC MARKET</span>
+            </div>
+            <button class="mob-drawer-close" onclick="toggleMobileMenu()" aria-label="إغلاق"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <!-- Mobile Search Box -->
+        <div class="mob-drawer-search">
+            <form onsubmit="event.preventDefault(); triggerMobileSearch();">
+                <div style="position:relative; display:flex; align-items:center;">
+                    <input type="text" id="mobSearchInput" placeholder="ابحث في المتجر العضوي..." style="width:100%; padding:10px 38px 10px 14px; border:1px solid #DDD; border-radius:6px; font-size:13px; font-family:'Cairo';">
+                    <button type="submit" style="position:absolute; right:10px; border:none; background:none; color:var(--porto-primary); font-size:15px; cursor:pointer;"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </form>
+        </div>
+
+        <div class="mob-drawer-body">
+            <!-- Section 1: All Categories (جميع الأقسام الغذائية) -->
+            <div class="mob-section-title"><i class="fa-solid fa-layer-group" style="color:var(--porto-primary); margin-left:6px;"></i> جميع الأقسام الغذائية</div>
+            <div class="mob-cat-list">
+                <a href="category.html?cat=veg" class="mob-cat-item">
+                    <span><i class="fa-solid fa-carrot" style="color:var(--porto-primary); width:20px; text-align:center; margin-left:8px;"></i> الخضروات العضوية</span>
+                    <i class="fa-solid fa-chevron-left" style="font-size:11px; color:#AAA;"></i>
+                </a>
+                <a href="category.html?cat=fruits" class="mob-cat-item">
+                    <span><i class="fa-solid fa-apple-whole" style="color:#E53935; width:20px; text-align:center; margin-left:8px;"></i> الفواكه الطازجة والموسمية</span>
+                    <i class="fa-solid fa-chevron-left" style="font-size:11px; color:#AAA;"></i>
+                </a>
+                <a href="category.html?cat=bakery" class="mob-cat-item">
+                    <span><i class="fa-solid fa-wheat-awn" style="color:#FFA000; width:20px; text-align:center; margin-left:8px;"></i> المخبوزات وإفطار الصباح</span>
+                    <i class="fa-solid fa-chevron-left" style="font-size:11px; color:#AAA;"></i>
+                </a>
+                <a href="category.html?cat=cooking" class="mob-cat-item">
+                    <span><i class="fa-solid fa-jar" style="color:#8D6E63; width:20px; text-align:center; margin-left:8px;"></i> زيوت الزيتون والمؤونة</span>
+                    <i class="fa-solid fa-chevron-left" style="font-size:11px; color:#AAA;"></i>
+                </a>
+                <a href="category.html?cat=meat" class="mob-cat-item">
+                    <span><i class="fa-solid fa-drumstick-bite" style="color:#C2185B; width:20px; text-align:center; margin-left:8px;"></i> لحوم ودواجن المراعي</span>
+                    <i class="fa-solid fa-chevron-left" style="font-size:11px; color:#AAA;"></i>
+                </a>
+                <a href="shop.html?filter=deals" class="mob-cat-item" style="background:#FFF8E1; color:#D84315; font-weight:800; border-radius:6px; margin:4px 0;">
+                    <span><i class="fa-solid fa-fire" style="color:#E53935; width:20px; text-align:center; margin-left:8px;"></i> عروض الأسبوع التوفيرية</span>
+                    <span style="background:#D84315; color:#fff; font-size:10px; padding:2px 6px; border-radius:10px; font-weight:800;">خصومات</span>
+                </a>
+            </div>
+
+            <!-- Section 2: Main Pages (صفحات المتجر) -->
+            <div class="mob-section-title" style="margin-top:18px;"><i class="fa-solid fa-compass" style="color:var(--porto-primary); margin-left:6px;"></i> صفحات المتجر</div>
+            <div class="mob-cat-list">
+                <a href="index.html" class="mob-cat-item"><span><i class="fa-solid fa-house" style="width:20px; text-align:center; margin-left:8px;"></i> الرئيسية</span></a>
+                <a href="shop.html" class="mob-cat-item"><span><i class="fa-solid fa-store" style="width:20px; text-align:center; margin-left:8px;"></i> المتجر الكامل</span></a>
+                <a href="category.html?cat=veg" class="mob-cat-item"><span><i class="fa-solid fa-basket-shopping" style="width:20px; text-align:center; margin-left:8px;"></i> تصفح الأقسام</span></a>
+                <a href="about.html" class="mob-cat-item"><span><i class="fa-solid fa-leaf" style="width:20px; text-align:center; margin-left:8px;"></i> عن المتجر ورؤيتنا</span></a>
+                <a href="contact.html" class="mob-cat-item"><span><i class="fa-solid fa-phone" style="width:20px; text-align:center; margin-left:8px;"></i> خدمة العملاء والتواصل</span></a>
+                <a href="admin/index.html" class="mob-cat-item" style="color:#2E7D32; font-weight:800;"><span><i class="fa-solid fa-lock" style="width:20px; text-align:center; margin-left:8px;"></i> دخول لوحة الإدارة (PIN: 1234)</span></a>
+            </div>
+
+            <!-- Quick Contacts Box -->
+            <div style="background:#F1F8E9; border:1px solid #C8E6C9; border-radius:8px; padding:12px; margin-top:20px; text-align:center;">
+                <p style="font-size:12px; font-weight:700; color:#2E7D32; margin-bottom:8px;">طلب سريع عبر واتساب</p>
+                <a href="https://wa.me/201027093535" target="_blank" style="background:#25D366; color:#fff; display:flex; align-items:center; justify-content:center; gap:8px; padding:8px 12px; border-radius:4px; font-size:13px; font-weight:800; text-decoration:none;">
+                    <i class="fa-brands fa-whatsapp" style="font-size:17px;"></i> 01027093535
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. MOBILE BOTTOM BAR (Fixed 5 Items) -->
+    <div class="mobile-bottom-nav">
+        <div class="mob-nav-grid" style="grid-template-columns: repeat(5, 1fr);">
+            <a href="index.html" class="mob-nav-item ">
+                <i class="fa-solid fa-house"></i>
+                <span>الرئيسية</span>
+            </a>
+            <a href="javascript:void(0)" onclick="toggleMobileMenu()" class="mob-nav-item">
+                <i class="fa-solid fa-bars"></i>
+                <span>الأقسام</span>
+            </a>
+            <a href="shop.html" class="mob-nav-item ">
+                <i class="fa-solid fa-store"></i>
+                <span>المتجر</span>
+            </a>
+            <a href="javascript:void(0)" onclick="toggleCartDrawer()" class="mob-nav-item" style="position:relative;">
+                <i class="fa-solid fa-basket-shopping"></i>
+                <span class="cart-badge-count" id="mobBottomCartCount" style="position:absolute; top:-4px; right:calc(50% - 18px); font-size:10px; width:16px; height:16px; line-height:16px;">0</span>
+                <span>السلة</span>
+            </a>
+            <a href="https://wa.me/201027093535" target="_blank" class="mob-nav-item" style="color:#25D366;">
+                <i class="fa-brands fa-whatsapp" style="font-size:20px;"></i>
+                <span>واتساب</span>
+            </a>
+        </div>
+    </div>
+
 </body>
 </html>

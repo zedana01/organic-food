@@ -168,12 +168,16 @@ function updateOrganicCartUI() {
     // Update counters
     const headerCount = document.getElementById('headerCartCount');
     const mobCount = document.getElementById('mobBottomCartCount');
+    const mobCartCount = document.getElementById('mobCartCount');
+    const mobCartCount = document.getElementById('mobCartCount');
     const drawerCount = document.getElementById('drawerItemsCount');
     const headerTotal = document.getElementById('headerCartTotal');
     const drawerSubtotal = document.getElementById('drawerSubtotal');
 
     if (headerCount) headerCount.textContent = count;
     if (mobCount) mobCount.textContent = count;
+    if (mobCartCount) mobCartCount.textContent = count;
+    if (mobCartCount) mobCartCount.textContent = count;
     if (drawerCount) drawerCount.textContent = count;
     if (headerTotal) headerTotal.textContent = total.toFixed(2) + ' ر.س';
     if (drawerSubtotal) drawerSubtotal.textContent = total.toFixed(2) + ' ر.س';
@@ -342,4 +346,58 @@ function addToCart(arg1, arg2, arg3, arg4, arg5, arg6) {
     } else {
         addToOrganicCart(arg1, arg2, arg3, arg4, arg5 || 1, arg6 || 'الافتراضي');
     }
+}
+
+
+// 9. MOBILE MENU DRAWER
+function toggleMobileMenu() {
+    const drawer = document.getElementById('mobileMenuDrawer');
+    const overlay = document.getElementById('mobileDrawerOverlay');
+    if (drawer && overlay) {
+        drawer.classList.toggle('active');
+        overlay.classList.toggle('active');
+        if (drawer.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    }
+}
+
+function closeMobileMenu() {
+    const drawer = document.getElementById('mobileMenuDrawer');
+    const overlay = document.getElementById('mobileDrawerOverlay');
+    if (drawer && overlay) {
+        drawer.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
+function triggerMobileSearch() {
+    const input = document.getElementById('mobSearchInput');
+    const q = input ? input.value.trim() : '';
+    if (q) {
+        window.location.href = 'shop.html?q=' + encodeURIComponent(q);
+    }
+}
+
+function triggerSearch(form) {
+    let q = '';
+    let cat = 'all';
+    if (form) {
+        const qInput = form.querySelector('input[type="text"]');
+        const catSelect = form.querySelector('select');
+        if (qInput) q = qInput.value.trim();
+        if (catSelect) cat = catSelect.value;
+    } else {
+        const qInput = document.getElementById('searchInput');
+        const catSelect = document.getElementById('headerSearchCat');
+        if (qInput) q = qInput.value.trim();
+        if (catSelect) cat = catSelect.value;
+    }
+    let url = 'shop.html?';
+    if (q) url += 'q=' + encodeURIComponent(q) + '&';
+    if (cat && cat !== 'all') url += 'cat=' + encodeURIComponent(cat);
+    window.location.href = url;
 }
