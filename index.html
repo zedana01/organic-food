@@ -419,103 +419,64 @@
     <!-- 6. POPULAR DEPARTMENTS (4 Large Cards) -->
 
     <section class="departments-section" id="departments">
-
         <div class="container">
-
             <div class="section-header-block">
-
                 <h2 class="section-title">الأقسام الأكثر طلباً</h2>
-
                 <p class="section-subtitle">المنتجات الطازجة الأكثر اختياراً من عملائنا يومياً</p>
-
             </div>
-
-
 
             <div class="departments-grid">
-
-                <div class="dept-card" onclick="filterCategory('veg')">
-
+                <a href="category.html?cat=veg" class="dept-card">
                     <div class="dept-card-text">
-
                         <h3>خضروات عضوية</h3>
-
                         <span>24 منتج طازج</span>
-
                     </div>
-
                     <div class="dept-card-img-box">
-
                         <img decoding="async" src="images/cat_veg.jpg" alt="خضروات عضوية" title="متجر بورتو أورجانيك للأغذية والمنتجات العضوية الطازجة | نموذج 6">
-
                     </div>
+                </a>
 
-                </div>
-
-
-
-                <div class="dept-card" onclick="filterCategory('fruits')">
-
+                <a href="category.html?cat=fruits" class="dept-card">
                     <div class="dept-card-text">
-
                         <h3>فواكه طازجة</h3>
-
                         <span>18 نوع موسمي</span>
-
                     </div>
-
                     <div class="dept-card-img-box">
-
                         <img decoding="async" src="images/cat_fruits.jpg" alt="فواكه طازجة" title="متجر بورتو أورجانيك للأغذية والمنتجات العضوية الطازجة | نموذج 6">
-
                     </div>
+                </a>
 
-                </div>
-
-
-
-                <div class="dept-card" onclick="filterCategory('bakery')">
-
+                <a href="category.html?cat=bakery" class="dept-card">
                     <div class="dept-card-text">
-
                         <h3>مخبوزات وإفطار</h3>
-
                         <span>15 صنف عضوي</span>
-
                     </div>
-
                     <div class="dept-card-img-box">
-
                         <img decoding="async" src="images/cat_bakery.jpg" alt="مخبوزات وإفطار" title="متجر بورتو أورجانيك للأغذية والمنتجات العضوية الطازجة | نموذج 6">
-
                     </div>
+                </a>
 
-                </div>
-
-
-
-                <div class="dept-card" onclick="filterCategory('cooking')">
-
+                <a href="category.html?cat=cooking" class="dept-card">
                     <div class="dept-card-text">
-
                         <h3>مؤونة وتوابل</h3>
-
                         <span>32 منتج منتقى</span>
-
                     </div>
-
                     <div class="dept-card-img-box">
-
                         <img decoding="async" src="images/cat_spices.jpg" alt="مؤونة وتوابل" title="متجر بورتو أورجانيك للأغذية والمنتجات العضوية الطازجة | نموذج 6">
-
                     </div>
+                </a>
 
-                </div>
-
+                <a href="category.html?cat=meat" class="dept-card">
+                    <div class="dept-card-text">
+                        <h3>لحوم ومراعي</h3>
+                        <span>12 صنف طازج</span>
+                    </div>
+                    <div class="dept-card-img-box">
+                        <img decoding="async" src="images/prod_steak.jpg" alt="لحوم ومراعي" title="متجر بورتو أورجانيك للأغذية والمنتجات العضوية الطازجة | نموذج 6">
+                    </div>
+                </a>
             </div>
-
         </div>
-
     </section>
 
 
@@ -523,253 +484,273 @@
     <!-- 7. MOST POPULAR PRODUCTS (6 Columns with Tab Filter) -->
 
     <section class="products-section" id="popular">
-
         <div class="container">
-
             <div class="tabs-header-wrapper">
-
                 <div class="section-header-block" style="margin-bottom:0;">
-
                     <h2 class="section-title">الأكثر شهرة ومبيعاً</h2>
-
                     <p class="section-subtitle">أحدث ما وصل إلى متجرنا من المنتجات العضوية الممتازة</p>
-
                 </div>
-
-
 
                 <div class="filter-tabs-list">
-
                     <button class="filter-tab-btn active" onclick="filterTab('all', this)">عرض الكل</button>
-
-                    <button class="filter-tab-btn" onclick="filterTab('breakfast', this)">إفطار الصباح</button>
-
-                    <button class="filter-tab-btn" onclick="filterTab('cooking', this)">الطهي والمؤونة</button>
-
-                    <button class="filter-tab-btn" onclick="filterTab('frozen', this)">مجمدات صحية</button>
-
-                    <button class="filter-tab-btn" onclick="filterTab('fruits', this)">الفواكه</button>
-
                     <button class="filter-tab-btn" onclick="filterTab('veg', this)">الخضار</button>
-
+                    <button class="filter-tab-btn" onclick="filterTab('fruits', this)">الفواكه</button>
+                    <button class="filter-tab-btn" onclick="filterTab('bakery', this)">إفطار ومخبوزات</button>
+                    <button class="filter-tab-btn" onclick="filterTab('cooking', this)">الطهي والمؤونة</button>
+                    <button class="filter-tab-btn" onclick="filterTab('meat', this)">لحوم ومجمدات</button>
                 </div>
-
             </div>
-
-
 
             <div class="products-grid-6col" id="productsGrid">
-
-                <!-- Product 1 -->
-
+                <!-- Product 1: باستا -->
                 <div class="product-card" data-cat="cooking">
-
                     <span class="product-badge-discount">-25%</span>
-
                     <div class="product-img-box">
-
-                        <img decoding="async" src="images/prod_pasta.jpg" alt="مكرونة إيطالية عضوية" title="متجر بورتو أورجانيك للأغذية والمنتجات العضوية الطازجة | نموذج 6">
-
+                        <a href="product.html?id=1"><img decoding="async" src="images/prod_pasta.jpg" alt="مكرونة إيطالية عضوية" title="متجر بورتو أورجانيك للأغذية والمنتجات العضوية الطازجة | نموذج 6"></a>
                     </div>
-
-                    <span class="product-cat-name">الطهي والمؤونة</span>
-
-                    <h4 class="product-item-title"><a href="#">باستا فيوسيلي إيطالية عضوية من القمح الكامل 500 جم</a></h4>
-
+                    <a href="category.html?cat=cooking" class="product-cat-name">الطهي والمؤونة</a>
+                    <h4 class="product-item-title"><a href="product.html?id=1">باستا فيوسيلي إيطالية عضوية من القمح الكامل 500 جم</a></h4>
                     <div class="product-rating-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-
                     <div class="product-prices-wrap">
-
                         <span class="price-old">24.00 ر.س</span>
-
                         <span class="price-current">18.00 ر.س</span>
-
                     </div>
-
-                    <button class="btn-add-cart-mini" onclick="addToCart('باستا فيوسيلي عضوية', 18, 'https://images.unsplash.com/photo-1551462147-ff29053bfc14?w=400&auto=format&fit=crop&q=80')">
-
+                    <button class="btn-add-cart-mini" onclick="addToOrganicCart(1, 'باستا فيوسيلي إيطالية عضوية من القمح الكامل 500 جم', 18, 'images/prod_pasta.jpg', 1, '500 جم')">
                         <i class="fa-solid fa-basket-shopping"></i> أضف للسلة
-
                     </button>
-
                 </div>
 
-
-
-                <!-- Product 2 -->
-
-                <div class="product-card" data-cat="frozen">
-
+                <!-- Product 2: ستيك -->
+                <div class="product-card" data-cat="meat">
                     <span class="product-badge-discount">-18%</span>
-
                     <div class="product-img-box">
-
-                        <img decoding="async" src="images/prod_steak.jpg" alt="لحم بقري عضوي" title="متجر بورتو أورجانيك للأغذية والمنتجات العضوية الطازجة | نموذج 6">
-
+                        <a href="product.html?id=2"><img decoding="async" src="images/prod_steak.jpg" alt="لحم بقري عضوي" title="متجر بورتو أورجانيك للأغذية والمنتجات العضوية الطازجة | نموذج 6"></a>
                     </div>
-
-                    <span class="product-cat-name">لحوم ومجمدات</span>
-
-                    <h4 class="product-item-title"><a href="#">ستيك تندرلوين عضوي طازج مربى على المراعي 450 جم</a></h4>
-
+                    <a href="category.html?cat=meat" class="product-cat-name">لحوم ومجمدات</a>
+                    <h4 class="product-item-title"><a href="product.html?id=2">ستيك تندرلوين عضوي طازج مربى على المراعي 450 جم</a></h4>
                     <div class="product-rating-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-
                     <div class="product-prices-wrap">
-
                         <span class="price-old">85.00 ر.س</span>
-
                         <span class="price-current">69.00 ر.س</span>
-
                     </div>
-
-                    <button class="btn-add-cart-mini" onclick="addToCart('ستيك تندرلوين عضوي', 69, 'https://images.unsplash.com/photo-1544025162-d76694265947?w=400&auto=format&fit=crop&q=80')">
-
+                    <button class="btn-add-cart-mini" onclick="addToOrganicCart(2, 'ستيك تندرلوين عضوي طازج مربى على المراعي 450 جم', 69, 'images/prod_steak.jpg', 1, '450 جم')">
                         <i class="fa-solid fa-basket-shopping"></i> أضف للسلة
-
                     </button>
-
                 </div>
 
-
-
-                <!-- Product 3 -->
-
+                <!-- Product 3: حمضيات -->
                 <div class="product-card" data-cat="fruits">
-
+                    <span class="product-badge-discount" style="background:#FFA000;">فيتامين C</span>
                     <div class="product-img-box">
-
-                        <img decoding="async" src="images/prod_citrus.jpg" alt="فواكه حمضية طازجة" title="متجر بورتو أورجانيك للأغذية والمنتجات العضوية الطازجة | نموذج 6">
-
+                        <a href="product.html?id=3"><img decoding="async" src="images/prod_citrus.jpg" alt="فواكه حمضية طازجة" title="متجر بورتو أورجانيك للأغذية والمنتجات العضوية الطازجة | نموذج 6"></a>
                     </div>
-
-                    <span class="product-cat-name">فواكه طازجة</span>
-
-                    <h4 class="product-item-title"><a href="#">تشكيلة حمضيات عضوية غنية بفيتامين ج 1 كجم</a></h4>
-
+                    <a href="category.html?cat=fruits" class="product-cat-name">فواكه طازجة</a>
+                    <h4 class="product-item-title"><a href="product.html?id=3">تشكيلة حمضيات عضوية غنية بفيتامين ج 1 كجم</a></h4>
                     <div class="product-rating-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div>
-
                     <div class="product-prices-wrap">
-
                         <span class="price-current">22.00 ر.س</span>
-
                     </div>
-
-                    <button class="btn-add-cart-mini" onclick="addToCart('تشكيلة حمضيات عضوية', 22, 'https://images.unsplash.com/photo-1525385133512-2f3bdd039054?w=400&auto=format&fit=crop&q=80')">
-
+                    <button class="btn-add-cart-mini" onclick="addToOrganicCart(3, 'تشكيلة حمضيات عضوية غنية بفيتامين ج 1 كجم', 22, 'images/prod_citrus.jpg', 1, '1 كجم')">
                         <i class="fa-solid fa-basket-shopping"></i> أضف للسلة
-
                     </button>
-
                 </div>
 
-
-
-                <!-- Product 4 -->
-
-                <div class="product-card" data-cat="breakfast">
-
+                <!-- Product 4: جرانولا -->
+                <div class="product-card" data-cat="bakery">
                     <span class="product-badge-discount">-30%</span>
-
                     <div class="product-img-box">
-
-                        <img decoding="async" src="images/prod_granola.jpg" alt="شوفان عضوي مقرمش" title="متجر بورتو أورجانيك للأغذية والمنتجات العضوية الطازجة | نموذج 6">
-
+                        <a href="product.html?id=4"><img decoding="async" src="images/prod_granola.jpg" alt="شوفان عضوي مقرمش" title="متجر بورتو أورجانيك للأغذية والمنتجات العضوية الطازجة | نموذج 6"></a>
                     </div>
-
-                    <span class="product-cat-name">إفطار ومخبوزات</span>
-
-                    <h4 class="product-item-title"><a href="#">جرانولا عضوية بالمكسرات والعسل الطبيعي 400 جم</a></h4>
-
+                    <a href="category.html?cat=bakery" class="product-cat-name">إفطار ومخبوزات</a>
+                    <h4 class="product-item-title"><a href="product.html?id=4">جرانولا عضوية بالمكسرات والعسل الطبيعي 400 جم</a></h4>
                     <div class="product-rating-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-
                     <div class="product-prices-wrap">
-
                         <span class="price-old">42.00 ر.س</span>
-
                         <span class="price-current">29.00 ر.س</span>
-
                     </div>
-
-                    <button class="btn-add-cart-mini" onclick="addToCart('جرانولا عضوية بالمكسرات', 29, 'https://images.unsplash.com/photo-1550583724-b2692b85b150?w=400&auto=format&fit=crop&q=80')">
-
+                    <button class="btn-add-cart-mini" onclick="addToOrganicCart(4, 'جرانولا عضوية بالمكسرات والعسل الطبيعي 400 جم', 29, 'images/prod_granola.jpg', 1, '400 جم')">
                         <i class="fa-solid fa-basket-shopping"></i> أضف للسلة
-
                     </button>
-
                 </div>
 
-
-
-                <!-- Product 5 -->
-
+                <!-- Product 5: أناناس -->
                 <div class="product-card" data-cat="fruits">
-
+                    <span class="product-badge-discount" style="background:#3FA163;">سوبر حلو</span>
                     <div class="product-img-box">
-
-                        <img decoding="async" src="images/prod_pineapple.jpg" alt="أناناس ذهبي حلو" title="متجر بورتو أورجانيك للأغذية والمنتجات العضوية الطازجة | نموذج 6">
-
+                        <a href="product.html?id=5"><img decoding="async" src="images/prod_pineapple.jpg" alt="أناناس ذهبي حلو" title="متجر بورتو أورجانيك للأغذية والمنتجات العضوية الطازجة | نموذج 6"></a>
                     </div>
-
-                    <span class="product-cat-name">فواكه طازجة</span>
-
-                    <h4 class="product-item-title"><a href="#">أناناس كوستاريكي ذهبي فائق الحلاوة حبة كاملة</a></h4>
-
+                    <a href="category.html?cat=fruits" class="product-cat-name">فواكه طازجة</a>
+                    <h4 class="product-item-title"><a href="product.html?id=5">أناناس كوستاريكي ذهبي فائق الحلاوة حبة كاملة</a></h4>
                     <div class="product-rating-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-
                     <div class="product-prices-wrap">
-
                         <span class="price-current">19.00 ر.س</span>
-
                     </div>
-
-                    <button class="btn-add-cart-mini" onclick="addToCart('أناناس كوستاريكي ذهبي', 19, 'https://images.unsplash.com/photo-1550258987-190a2d41a8ba?w=400&auto=format&fit=crop&q=80')">
-
+                    <button class="btn-add-cart-mini" onclick="addToOrganicCart(5, 'أناناس كوستاريكي ذهبي فائق الحلاوة حبة كاملة', 19, 'images/prod_pineapple.jpg', 1, 'حبة كاملة')">
                         <i class="fa-solid fa-basket-shopping"></i> أضف للسلة
-
                     </button>
-
                 </div>
 
-
-
-                <!-- Product 6 -->
-
+                <!-- Product 6: موز -->
                 <div class="product-card" data-cat="fruits">
-
                     <span class="product-badge-discount">-20%</span>
-
                     <div class="product-img-box">
-
-                        <img decoding="async" src="images/prod_banana.jpg" alt="موز عضوي طازج" title="متجر بورتو أورجانيك للأغذية والمنتجات العضوية الطازجة | نموذج 6">
-
+                        <a href="product.html?id=6"><img decoding="async" src="images/prod_banana.jpg" alt="موز عضوي طازج" title="متجر بورتو أورجانيك للأغذية والمنتجات العضوية الطازجة | نموذج 6"></a>
                     </div>
-
-                    <span class="product-cat-name">فواكه طازجة</span>
-
-                    <h4 class="product-item-title"><a href="#">موز إكوادوري عضوي ممتاز غني بالبوتاسيوم 1 كجم</a></h4>
-
+                    <a href="category.html?cat=fruits" class="product-cat-name">فواكه طازجة</a>
+                    <h4 class="product-item-title"><a href="product.html?id=6">موز إكوادوري عضوي ممتاز غني بالبوتاسيوم 1 كجم</a></h4>
                     <div class="product-rating-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div>
-
                     <div class="product-prices-wrap">
-
-                        <span class="price-old">12.00 ر.س</span>
-
-                        <span class="price-current">9.50 ر.س</span>
-
+                        <span class="price-old">15.00 ر.س</span>
+                        <span class="price-current">12.00 ر.س</span>
                     </div>
-
-                    <button class="btn-add-cart-mini" onclick="addToCart('موز إكوادوري عضوي', 9.5, 'https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=400&auto=format&fit=crop&q=80')">
-
+                    <button class="btn-add-cart-mini" onclick="addToOrganicCart(6, 'موز إكوادوري عضوي ممتاز غني بالبوتاسيوم 1 كجم', 12, 'images/prod_banana.jpg', 1, '1 كجم')">
                         <i class="fa-solid fa-basket-shopping"></i> أضف للسلة
-
                     </button>
-
                 </div>
 
+                <!-- Product 7: جزر (خضار) -->
+                <div class="product-card" data-cat="veg">
+                    <span class="product-badge-discount">-27%</span>
+                    <div class="product-img-box">
+                        <a href="product.html?id=7"><img decoding="async" src="images/prod_carrots.jpg" alt="جزر عضوي طازج" title="متجر بورتو أورجانيك للأغذية والمنتجات العضوية الطازجة | نموذج 6"></a>
+                    </div>
+                    <a href="category.html?cat=veg" class="product-cat-name">خضروات عضوية</a>
+                    <h4 class="product-item-title"><a href="product.html?id=7">جزر عضوي طازج مقرمش من المزرعة 1 كجم</a></h4>
+                    <div class="product-rating-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <div class="product-prices-wrap">
+                        <span class="price-old">13.00 ر.س</span>
+                        <span class="price-current">9.50 ر.س</span>
+                    </div>
+                    <button class="btn-add-cart-mini" onclick="addToOrganicCart(7, 'جزر عضوي طازج مقرمش من المزرعة 1 كجم', 9.5, 'images/prod_carrots.jpg', 1, '1 كجم')">
+                        <i class="fa-solid fa-basket-shopping"></i> أضف للسلة
+                    </button>
+                </div>
+
+                <!-- Product 8: عصير عنب -->
+                <div class="product-card" data-cat="cooking">
+                    <span class="product-badge-discount">-19%</span>
+                    <div class="product-img-box">
+                        <a href="product.html?id=8"><img decoding="async" src="images/prod_grape_juice.jpg" alt="عصير عنب طبيعي" title="متجر بورتو أورجانيك للأغذية والمنتجات العضوية الطازجة | نموذج 6"></a>
+                    </div>
+                    <a href="category.html?cat=cooking" class="product-cat-name">الطهي والمؤونة</a>
+                    <h4 class="product-item-title"><a href="product.html?id=8">عصير عنب أبيض فوار خالي من السكر 750 مل</a></h4>
+                    <div class="product-rating-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <div class="product-prices-wrap">
+                        <span class="price-old">32.00 ر.س</span>
+                        <span class="price-current">26.00 ر.س</span>
+                    </div>
+                    <button class="btn-add-cart-mini" onclick="addToOrganicCart(8, 'عصير عنب أبيض فوار خالي من السكر 750 مل', 26, 'images/prod_grape_juice.jpg', 1, '750 مل')">
+                        <i class="fa-solid fa-basket-shopping"></i> أضف للسلة
+                    </button>
+                </div>
+
+                <!-- Product 9: عسل سدر -->
+                <div class="product-card" data-cat="bakery">
+                    <span class="product-badge-discount">-19%</span>
+                    <div class="product-img-box">
+                        <a href="product.html?id=9"><img decoding="async" src="images/prod_honey.jpg" alt="عسل سدر جبلي" title="متجر بورتو أورجانيك للأغذية والمنتجات العضوية الطازجة | نموذج 6"></a>
+                    </div>
+                    <a href="category.html?cat=bakery" class="product-cat-name">إفطار ومخبوزات</a>
+                    <h4 class="product-item-title"><a href="product.html?id=9">عسل سدر جبلي دوعني خام طبيعي 100% 500 جم</a></h4>
+                    <div class="product-rating-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <div class="product-prices-wrap">
+                        <span class="price-old">180.00 ر.س</span>
+                        <span class="price-current">145.00 ر.س</span>
+                    </div>
+                    <button class="btn-add-cart-mini" onclick="addToOrganicCart(9, 'عسل سدر جبلي دوعني خام طبيعي 100% 500 جم', 145, 'images/prod_honey.jpg', 1, '500 جم')">
+                        <i class="fa-solid fa-basket-shopping"></i> أضف للسلة
+                    </button>
+                </div>
+
+                <!-- Product 10: عنب أخضر -->
+                <div class="product-card" data-cat="fruits">
+                    <span class="product-badge-discount">-20%</span>
+                    <div class="product-img-box">
+                        <a href="product.html?id=10"><img decoding="async" src="images/prod_green_grapes.jpg" alt="عنب أخضر بدون بذور" title="متجر بورتو أورجانيك للأغذية والمنتجات العضوية الطازجة | نموذج 6"></a>
+                    </div>
+                    <a href="category.html?cat=fruits" class="product-cat-name">فواكه طازجة</a>
+                    <h4 class="product-item-title"><a href="product.html?id=10">عنب أخضر بدون بذور حلو المذاق علبة 500 جم</a></h4>
+                    <div class="product-rating-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div>
+                    <div class="product-prices-wrap">
+                        <span class="price-old">20.00 ر.س</span>
+                        <span class="price-current">16.00 ر.س</span>
+                    </div>
+                    <button class="btn-add-cart-mini" onclick="addToOrganicCart(10, 'عنب أخضر بدون بذور حلو المذاق علبة 500 جم', 16, 'images/prod_green_grapes.jpg', 1, '500 جم')">
+                        <i class="fa-solid fa-basket-shopping"></i> أضف للسلة
+                    </button>
+                </div>
+
+                <!-- Product 11: توست حبوب -->
+                <div class="product-card" data-cat="bakery">
+                    <span class="product-badge-discount">-21%</span>
+                    <div class="product-img-box">
+                        <a href="product.html?id=11"><img decoding="async" src="images/prod_toast.jpg" alt="توست حبوب كاملة" title="متجر بورتو أورجانيك للأغذية والمنتجات العضوية الطازجة | نموذج 6"></a>
+                    </div>
+                    <a href="category.html?cat=bakery" class="product-cat-name">إفطار ومخبوزات</a>
+                    <h4 class="product-item-title"><a href="product.html?id=11">توست حبوب كاملة عضوية محمص كرسبي 300 جم</a></h4>
+                    <div class="product-rating-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <div class="product-prices-wrap">
+                        <span class="price-old">14.50 ر.س</span>
+                        <span class="price-current">11.50 ر.س</span>
+                    </div>
+                    <button class="btn-add-cart-mini" onclick="addToOrganicCart(11, 'توست حبوب كاملة عضوية محمص كرسبي 300 جم', 11.5, 'images/prod_toast.jpg', 1, '300 جم')">
+                        <i class="fa-solid fa-basket-shopping"></i> أضف للسلة
+                    </button>
+                </div>
+
+                <!-- Product 12: بن إثيوبي -->
+                <div class="product-card" data-cat="cooking">
+                    <span class="product-badge-discount">-25%</span>
+                    <div class="product-img-box">
+                        <a href="product.html?id=12"><img decoding="async" src="images/hero_transparent.png" alt="بن إثيوبي عضوي" title="متجر بورتو أورجانيك للأغذية والمنتجات العضوية الطازجة | نموذج 6"></a>
+                    </div>
+                    <a href="category.html?cat=cooking" class="product-cat-name">الطهي والمؤونة</a>
+                    <h4 class="product-item-title"><a href="product.html?id=12">بن إثيوبي عضوي محمص يدوياً 340 جم</a></h4>
+                    <div class="product-rating-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <div class="product-prices-wrap">
+                        <span class="price-old">65.00 ر.س</span>
+                        <span class="price-current">49.00 ر.س</span>
+                    </div>
+                    <button class="btn-add-cart-mini" onclick="addToOrganicCart(12, 'بن إثيوبي عضوي محمص يدوياً 340 جم', 49, 'images/hero_transparent.png', 1, '340 جم')">
+                        <i class="fa-solid fa-basket-shopping"></i> أضف للسلة
+                    </button>
+                </div>
+
+                <!-- Product 13: خضار ورقية (خضار) -->
+                <div class="product-card" data-cat="veg">
+                    <span class="product-badge-discount" style="background:#2E7D32;">طازج اليوم</span>
+                    <div class="product-img-box">
+                        <a href="product.html?id=7"><img decoding="async" src="images/cat_veg.jpg" alt="خضروات ورقية عضوية" title="متجر بورتو أورجانيك للأغذية والمنتجات العضوية الطازجة | نموذج 6"></a>
+                    </div>
+                    <a href="category.html?cat=veg" class="product-cat-name">خضروات عضوية</a>
+                    <h4 class="product-item-title"><a href="product.html?id=7">خضار ورقية مشكلة عضوية مغسولة 350 جم</a></h4>
+                    <div class="product-rating-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <div class="product-prices-wrap">
+                        <span class="price-current">8.50 ر.س</span>
+                    </div>
+                    <button class="btn-add-cart-mini" onclick="addToOrganicCart(13, 'خضار ورقية مشكلة عضوية مغسولة 350 جم', 8.5, 'images/cat_veg.jpg', 1, '350 جم')">
+                        <i class="fa-solid fa-basket-shopping"></i> أضف للسلة
+                    </button>
+                </div>
+
+                <!-- Product 14: بهارات ومؤونة -->
+                <div class="product-card" data-cat="cooking">
+                    <span class="product-badge-discount" style="background:#5D4037;">نكهة مميزة</span>
+                    <div class="product-img-box">
+                        <a href="product.html?id=1"><img decoding="async" src="images/cat_spices.jpg" alt="بهارات عضوية" title="متجر بورتو أورجانيك للأغذية والمنتجات العضوية الطازجة | نموذج 6"></a>
+                    </div>
+                    <a href="category.html?cat=cooking" class="product-cat-name">الطهي والمؤونة</a>
+                    <h4 class="product-item-title"><a href="product.html?id=1">بهارات ومؤونة عطرية عضوية للمطبخ 200 جم</a></h4>
+                    <div class="product-rating-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <div class="product-prices-wrap">
+                        <span class="price-current">15.00 ر.س</span>
+                    </div>
+                    <button class="btn-add-cart-mini" onclick="addToOrganicCart(14, 'بهارات ومؤونة عطرية عضوية 200 جم', 15, 'images/cat_spices.jpg', 1, '200 جم')">
+                        <i class="fa-solid fa-basket-shopping"></i> أضف للسلة
+                    </button>
+                </div>
             </div>
-
         </div>
-
     </section>
 
 
@@ -806,7 +787,7 @@
 
                         </div>
 
-                        <span class="product-cat-name">خضروات عضوية</span>
+                        <a href="category.html?cat=veg" class="product-cat-name">خضروات عضوية</a>
 
                         <h4 class="product-item-title"><a href="#">جزر عضوي طازج مقرمش من المزرعة 1 كجم</a></h4>
 
@@ -836,7 +817,7 @@
 
                         </div>
 
-                        <span class="product-cat-name">مشروبات طبيعية</span>
+                        <a href="category.html?cat=cooking" class="product-cat-name">مشروبات طبيعية</a>
 
                         <h4 class="product-item-title"><a href="#">عصير عنب أبيض فوار خالي من السكر 750 مل</a></h4>
 
@@ -866,7 +847,7 @@
 
                         </div>
 
-                        <span class="product-cat-name">عسل ومربيات</span>
+                        <a href="category.html?cat=bakery" class="product-cat-name">عسل ومربيات</a>
 
                         <h4 class="product-item-title"><a href="#">عسل سدر جبلي دوعني خام طبيعي 100% 500 جم</a></h4>
 
@@ -894,7 +875,7 @@
 
                         </div>
 
-                        <span class="product-cat-name">فواكه طازجة</span>
+                        <a href="category.html?cat=fruits" class="product-cat-name">فواكه طازجة</a>
 
                         <h4 class="product-item-title"><a href="#">عنب أخضر بدون بذور حلو المذاق علبة 500 جم</a></h4>
 
@@ -924,7 +905,7 @@
 
                         </div>
 
-                        <span class="product-cat-name">مخبوزات طازجة</span>
+                        <a href="category.html?cat=bakery" class="product-cat-name">مخبوزات طازجة</a>
 
                         <h4 class="product-item-title"><a href="#">توست حبوب كاملة عضوية محمص كرسبي 300 جم</a></h4>
 
@@ -954,7 +935,7 @@
 
                         </div>
 
-                        <span class="product-cat-name">فواكه طازجة</span>
+                        <a href="category.html?cat=fruits" class="product-cat-name">فواكه طازجة</a>
 
                         <h4 class="product-item-title"><a href="#">بطيخ أحمر محلي مروي بماء عذب حبة كاملة</a></h4>
 
@@ -1230,7 +1211,7 @@
 
                         <div class="product-img-box"><img decoding="async" src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?w=300&amp;auto=format&amp;fit=crop&amp;q=80" alt="أناناس ذهبي" title="متجر بورتو أورجانيك للأغذية والمنتجات العضوية الطازجة | نموذج 6"></div>
 
-                        <span class="product-cat-name">فواكه طازجة</span>
+                        <a href="category.html?cat=fruits" class="product-cat-name">فواكه طازجة</a>
 
                         <h4 class="product-item-title"><a href="#">أناناس سكري طبيعي ناضج تماماً</a></h4>
 
@@ -1248,7 +1229,7 @@
 
                         <div class="product-img-box"><img decoding="async" src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=300&amp;auto=format&amp;fit=crop&amp;q=80" alt="موز عضوي" title="متجر بورتو أورجانيك للأغذية والمنتجات العضوية الطازجة | نموذج 6"></div>
 
-                        <span class="product-cat-name">فواكه طازجة</span>
+                        <a href="category.html?cat=fruits" class="product-cat-name">فواكه طازجة</a>
 
                         <h4 class="product-item-title"><a href="#">موز عضوي كرتون عائلي 2 كجم</a></h4>
 

@@ -1330,9 +1330,61 @@
 
             display: grid;
 
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(5, 1fr);
 
-            gap: 20px;
+            gap: 16px;
+
+        }
+
+        .dept-card, a.dept-card {
+
+            background: #FFFFFF;
+
+            border: 1px solid #EBEBEB;
+
+            border-radius: var(--radius-sm);
+
+            padding: 16px 14px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 12px;
+
+            transition: var(--transition);
+
+            cursor: pointer;
+
+            overflow: hidden;
+
+            text-decoration: none !important;
+
+            color: inherit !important;
+
+        }
+
+        .product-card.card-hidden {
+
+            display: none !important;
+
+        }
+
+        a.product-cat-name {
+
+            text-decoration: none;
+
+            display: inline-block;
+
+            transition: color 0.2s;
+
+        }
+
+        a.product-cat-name:hover {
+
+            color: var(--porto-primary) !important;
 
         }
 

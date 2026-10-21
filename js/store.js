@@ -294,3 +294,52 @@ document.addEventListener('DOMContentLoaded', () => {
     updateOrganicCartUI();
     applyOrganicLiveCMS();
 });
+
+
+// 8. CATEGORY & TAB FILTERING
+function filterCategory(cat) {
+    window.location.href = 'category.html?cat=' + encodeURIComponent(cat);
+}
+
+function filterTab(cat, btn) {
+    const tabBtns = document.querySelectorAll('.filter-tab-btn');
+    tabBtns.forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+
+    const cards = document.querySelectorAll('#productsGrid .product-card');
+    cards.forEach(card => {
+        const cardCat = card.getAttribute('data-cat') || '';
+        let match = false;
+        if (cat === 'all') {
+            match = true;
+        } else if (cat === cardCat) {
+            match = true;
+        } else if (cat === 'bakery' && (cardCat === 'bakery' || cardCat === 'breakfast')) {
+            match = true;
+        } else if (cat === 'breakfast' && (cardCat === 'bakery' || cardCat === 'breakfast')) {
+            match = true;
+        } else if (cat === 'meat' && (cardCat === 'meat' || cardCat === 'frozen')) {
+            match = true;
+        } else if (cat === 'frozen' && (cardCat === 'meat' || cardCat === 'frozen')) {
+            match = true;
+        }
+
+        if (match) {
+            card.classList.remove('card-hidden');
+            card.style.removeProperty('display');
+        } else {
+            card.classList.add('card-hidden');
+            card.style.setProperty('display', 'none', 'important');
+        }
+    });
+}
+
+// Global addToCart compatibility wrapper
+function addToCart(arg1, arg2, arg3, arg4, arg5, arg6) {
+    if (typeof arg1 === 'string' && (typeof arg2 === 'number' || !isNaN(parseFloat(arg2)))) {
+        const id = Math.abs(arg1.split('').reduce((acc, char) => ((acc << 5) - acc) + char.charCodeAt(0), 0)) % 10000 || 1;
+        addToOrganicCart(id, arg1, parseFloat(arg2), arg3 || '', 1, 'الافتراضي');
+    } else {
+        addToOrganicCart(arg1, arg2, arg3, arg4, arg5 || 1, arg6 || 'الافتراضي');
+    }
+}
