@@ -1,0 +1,3523 @@
+
+
+        :root {
+
+            --porto-primary: #3FA163;          /* Porto 35 Signature Organic Green */
+
+            --porto-primary-hover: #328350;
+
+            --porto-secondary: #222529;        /* Dark Charcoal Slate */
+
+            --porto-dark: #1E2124;
+
+            --porto-accent: #E03E52;           /* Red discount badge & This Week border */
+
+            --porto-badge-hot: #3FA163;        /* Fresh green badge */
+
+            --bg-sage: #E5ECE9;                /* Porto 35 Signature Hero Background */
+
+            --bg-light: #F4F6F5;               /* Clean grocery soft background */
+
+            --bg-surface: #FFFFFF;
+
+            --border-color: #E7ECE8;
+
+            --border-dark: #2A2E33;
+
+            --text-main: #222529;
+
+            --text-muted: #777777;
+
+            --text-light: #999999;
+
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+            --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.08);
+
+            --shadow-lg: 0 12px 35px rgba(0, 0, 0, 0.12);
+
+            --radius-sm: 3px;
+
+            --radius-md: 6px;
+
+            --radius-lg: 10px;
+
+            --transition: all 0.25s ease-in-out;
+
+        }
+
+
+
+        *, *::before, *::after {
+
+            box-sizing: border-box;
+
+            margin: 0;
+
+            padding: 0;
+
+            -webkit-tap-highlight-color: transparent;
+
+        }
+
+
+
+        html, body {
+
+            width: 100%;
+
+            max-width: 100vw;
+
+            overflow-x: hidden !important;
+
+            position: relative;
+
+        }
+
+
+
+        body {
+
+            font-family: 'Cairo', 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+            background-color: #FFFFFF;
+
+            color: var(--text-main);
+
+            direction: rtl;
+
+            text-align: right;
+
+            line-height: 1.6;
+
+            padding-bottom: 60px;
+
+        }
+
+
+
+        @media (min-width: 992px) {
+
+            body {
+
+                padding-bottom: 0;
+
+            }
+
+        }
+
+
+
+        a {
+
+            color: inherit;
+
+            text-decoration: none;
+
+            transition: var(--transition);
+
+        }
+
+
+
+        ul {
+
+            list-style: none;
+
+        }
+
+
+
+        img {
+
+            max-width: 100%;
+
+            height: auto;
+
+            display: block;
+
+        }
+
+
+
+        button, input, select {
+
+            font-family: inherit;
+
+        }
+
+
+
+        .container {
+
+            width: 100%;
+
+            max-width: 1240px;
+
+            margin: 0 auto;
+
+            padding: 0 20px;
+
+        }
+
+
+
+        /* ----------------------------------------------------
+
+           1. TOP BAR (Porto Shop 35)
+
+        ---------------------------------------------------- */
+
+        .porto-topbar {
+
+            background-color: #FFFFFF;
+
+            border-bottom: 1px solid #ECECEC;
+
+            font-size: 11.5px;
+
+            color: var(--text-muted);
+
+            padding: 7px 0;
+
+        }
+
+
+
+        .topbar-inner {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+        }
+
+
+
+        .topbar-msg {
+
+            font-weight: 700;
+
+            color: var(--text-main);
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            letter-spacing: 0.2px;
+
+        }
+
+
+
+        .topbar-msg i {
+
+            color: var(--porto-primary);
+
+            font-size: 14px;
+
+        }
+
+
+
+        .topbar-links {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 18px;
+
+        }
+
+
+
+        .topbar-links a {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 5px;
+
+            color: var(--text-muted);
+
+        }
+
+
+
+        .topbar-links a:hover {
+
+            color: var(--porto-primary);
+
+        }
+
+
+
+        .topbar-socials {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            margin-right: 12px;
+
+            padding-right: 12px;
+
+            border-right: 1px solid #ECECEC;
+
+        }
+
+
+
+        .topbar-socials a {
+
+            color: #666;
+
+            font-size: 13px;
+
+        }
+
+
+
+        .topbar-socials a:hover {
+
+            color: var(--porto-primary);
+
+        }
+
+
+
+        /* ----------------------------------------------------
+
+           2. MAIN HEADER (Search, Logo, Cart Drawer)
+
+        ---------------------------------------------------- */
+
+        .porto-header {
+
+            background-color: #FFFFFF;
+
+            padding: 22px 0;
+
+            position: relative;
+
+        }
+
+
+
+        .header-inner {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 25px;
+
+        }
+
+
+
+        .header-logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            text-decoration: none;
+
+        }
+
+
+
+        .logo-text-box h1 {
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 32px;
+
+            font-weight: 900;
+
+            color: var(--porto-secondary);
+
+            line-height: 1;
+
+            letter-spacing: -0.5px;
+
+        }
+
+
+
+        .logo-text-box span {
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            color: var(--porto-primary);
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.5px;
+
+            display: block;
+
+            margin-top: 2px;
+
+        }
+
+
+
+        /* Search Form (Pill with Green Outline & Green Submit) */
+
+        .header-search-form {
+
+            flex: 1;
+
+            max-width: 580px;
+
+            display: flex;
+
+            align-items: center;
+
+            border: 2px solid var(--porto-primary);
+
+            border-radius: 4px;
+
+            overflow: hidden;
+
+            background: #FFFFFF;
+
+            height: 44px;
+
+        }
+
+
+
+        .search-category-select {
+
+            border: none;
+
+            background: transparent;
+
+            padding: 0 14px;
+
+            font-size: 12.5px;
+
+            color: var(--text-muted);
+
+            outline: none;
+
+            cursor: pointer;
+
+            border-left: 1px solid #E1E6E2;
+
+            height: 100%;
+
+        }
+
+
+
+        .search-input-field {
+
+            flex: 1;
+
+            border: none;
+
+            outline: none;
+
+            padding: 0 14px;
+
+            font-size: 13.5px;
+
+            color: var(--text-main);
+
+            height: 100%;
+
+        }
+
+
+
+        .search-submit-btn {
+
+            background-color: var(--porto-primary);
+
+            border: none;
+
+            outline: none;
+
+            color: #FFFFFF;
+
+            width: 48px;
+
+            height: 100%;
+
+            cursor: pointer;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 15px;
+
+            transition: var(--transition);
+
+        }
+
+
+
+        .search-submit-btn:hover {
+
+            background-color: var(--porto-primary-hover);
+
+        }
+
+
+
+        .header-user-actions {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 20px;
+
+        }
+
+
+
+        .user-account-box {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            text-align: right;
+
+            cursor: pointer;
+
+        }
+
+
+
+        .user-account-box i {
+
+            font-size: 26px;
+
+            color: var(--porto-secondary);
+
+        }
+
+
+
+        .user-account-text span {
+
+            display: block;
+
+            font-size: 11px;
+
+            color: var(--text-muted);
+
+            line-height: 1.2;
+
+        }
+
+
+
+        .user-account-text strong {
+
+            font-size: 13.5px;
+
+            font-weight: 800;
+
+            color: var(--porto-secondary);
+
+        }
+
+
+
+        .header-cart-box {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            cursor: pointer;
+
+            padding: 6px 10px;
+
+            border-radius: 6px;
+
+            transition: var(--transition);
+
+        }
+
+
+
+        .header-cart-box:hover {
+
+            background-color: #F8FAF9;
+
+        }
+
+
+
+        .cart-icon-wrapper {
+
+            position: relative;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+
+
+        .cart-icon-wrapper i {
+
+            font-size: 26px;
+
+            color: var(--porto-secondary);
+
+        }
+
+
+
+        .cart-badge-count {
+
+            position: absolute;
+
+            top: -6px;
+
+            left: -6px;
+
+            background: var(--porto-accent);
+
+            color: #FFFFFF;
+
+            font-size: 10.5px;
+
+            font-weight: 800;
+
+            min-width: 18px;
+
+            height: 18px;
+
+            border-radius: 9px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 0 4px;
+
+            line-height: 1;
+
+        }
+
+
+
+        .cart-info-text {
+
+            display: flex;
+
+            flex-direction: column;
+
+            text-align: right;
+
+            line-height: 1.2;
+
+        }
+
+
+
+        .cart-info-label {
+
+            font-size: 11px;
+
+            color: var(--text-muted);
+
+            font-weight: 600;
+
+        }
+
+
+
+        .cart-info-total {
+
+            font-size: 14.5px;
+
+            font-weight: 800;
+
+            color: var(--porto-primary);
+
+            font-family: 'Poppins', 'Cairo', sans-serif;
+
+        }
+
+
+
+        /* ----------------------------------------------------
+
+           3. NAVIGATION BAR (Porto Shop 35)
+
+        ---------------------------------------------------- */
+
+        .porto-navbar {
+
+            background-color: #FFFFFF;
+
+            border-top: 1px solid #ECECEC;
+
+            border-bottom: 1px solid #ECECEC;
+
+            position: relative;
+
+            z-index: 100;
+
+        }
+
+
+
+        .navbar-inner {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+        }
+
+
+
+        /* All Departments Dropdown Button */
+
+        .dept-dropdown-wrapper {
+
+            position: relative;
+
+        }
+
+
+
+        .dept-btn {
+
+            background-color: var(--porto-primary);
+
+            color: #FFFFFF;
+
+            padding: 13px 22px;
+
+            font-weight: 800;
+
+            font-size: 14px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            cursor: pointer;
+
+            border: none;
+
+            outline: none;
+
+            transition: var(--transition);
+
+        }
+
+
+
+        .dept-btn:hover {
+
+            background-color: var(--porto-primary-hover);
+
+        }
+
+
+
+        .dept-btn i.fa-bars {
+
+            font-size: 16px;
+
+        }
+
+
+
+        .dept-menu {
+
+            position: absolute;
+
+            top: 100%;
+
+            right: 0;
+
+            width: 250px;
+
+            background: #FFFFFF;
+
+            border: 1px solid #E5E5E5;
+
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+
+            display: none;
+
+            flex-direction: column;
+
+            z-index: 200;
+
+        }
+
+
+
+        .dept-dropdown-wrapper:hover .dept-menu {
+
+            display: flex;
+
+        }
+
+
+
+        .dept-menu a {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 11px 18px;
+
+            font-size: 13.5px;
+
+            font-weight: 700;
+
+            color: var(--porto-secondary);
+
+            border-bottom: 1px solid #F5F5F5;
+
+        }
+
+
+
+        .dept-menu a:hover {
+
+            background-color: #F8FAF9;
+
+            color: var(--porto-primary);
+
+            padding-right: 22px;
+
+        }
+
+
+
+        .nav-links-list {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 28px;
+
+        }
+
+
+
+        .nav-links-list a {
+
+            font-size: 13.5px;
+
+            font-weight: 700;
+
+            color: var(--porto-secondary);
+
+            padding: 14px 0;
+
+            display: inline-block;
+
+            position: relative;
+
+        }
+
+
+
+        .nav-links-list a:hover,
+
+        .nav-links-list a.active {
+
+            color: var(--porto-primary);
+
+        }
+
+
+
+        .special-offers-link {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            font-weight: 800;
+
+            font-size: 13.5px;
+
+            color: var(--porto-secondary);
+
+            padding: 14px 0;
+
+        }
+
+
+
+        .special-offers-link i {
+
+            color: var(--porto-primary);
+
+            font-size: 17px;
+
+        }
+
+
+
+        .special-offers-link:hover {
+
+            color: var(--porto-primary);
+
+        }
+
+
+
+        /* ----------------------------------------------------
+
+           4. HERO BANNER (Block 1 - Sage Background & Organic Coffee)
+
+        ---------------------------------------------------- */
+
+        .porto-hero-section {
+
+            background-color: var(--bg-sage);
+
+            position: relative;
+
+            overflow: hidden;
+
+            padding: 50px 0 60px;
+
+        }
+
+
+
+        .hero-inner {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 40px;
+
+        }
+
+
+
+        .hero-content-col {
+
+            flex: 1;
+
+            max-width: 580px;
+
+            z-index: 2;
+
+        }
+
+
+
+        .hero-badge-pill {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 6px;
+
+            background: rgba(63, 161, 99, 0.15);
+
+            color: var(--porto-primary);
+
+            padding: 6px 14px;
+
+            border-radius: 20px;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.5px;
+
+            margin-bottom: 18px;
+
+        }
+
+
+
+        .hero-title {
+
+            font-size: 46px;
+
+            font-weight: 900;
+
+            color: var(--porto-secondary);
+
+            line-height: 1.15;
+
+            margin-bottom: 16px;
+
+        }
+
+
+
+        .hero-title span {
+
+            color: var(--porto-primary);
+
+        }
+
+
+
+        .hero-subtitle {
+
+            font-size: 16px;
+
+            color: #555555;
+
+            line-height: 1.6;
+
+            margin-bottom: 28px;
+
+        }
+
+
+
+        .hero-cta-group {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 16px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+
+        .hero-price-badge {
+
+            background-color: var(--porto-accent);
+
+            color: #FFFFFF;
+
+            padding: 8px 18px;
+
+            border-radius: var(--radius-sm);
+
+            display: inline-flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            box-shadow: 0 4px 14px rgba(224, 62, 82, 0.35);
+
+        }
+
+
+
+        .hero-price-badge .price-label {
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.8px;
+
+            line-height: 1;
+
+            opacity: 0.9;
+
+        }
+
+
+
+        .hero-price-badge .price-val {
+
+            font-size: 22px;
+
+            font-weight: 900;
+
+            font-family: 'Poppins', 'Cairo', sans-serif;
+
+            line-height: 1.2;
+
+        }
+
+
+
+        .hero-btn-shop {
+
+            background-color: var(--porto-primary);
+
+            color: #FFFFFF;
+
+            padding: 13px 30px;
+
+            font-size: 14px;
+
+            font-weight: 800;
+
+            letter-spacing: 0.5px;
+
+            border-radius: var(--radius-sm);
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            transition: var(--transition);
+
+            box-shadow: 0 4px 15px rgba(63, 161, 99, 0.3);
+
+        }
+
+
+
+        .hero-btn-shop:hover {
+
+            background-color: var(--porto-primary-hover);
+
+            transform: translateY(-2px);
+
+            box-shadow: 0 6px 20px rgba(63, 161, 99, 0.4);
+
+        }
+
+
+
+        .hero-media-col {
+
+            flex: 1;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            position: relative;
+
+        }
+
+
+
+        .hero-main-img {
+
+            max-height: 480px;
+
+            object-fit: contain;
+
+            filter: drop-shadow(0 15px 30px rgba(0,0,0,0.12));
+
+            animation: floatHero 4s ease-in-out infinite alternate;
+
+        }
+
+
+
+        @keyframes floatHero {
+
+            0% { transform: translateY(0); }
+
+            100% { transform: translateY(-8px); }
+
+        }
+
+
+
+        /* ----------------------------------------------------
+
+           5. FLOATING FEATURE BADGES (4 Cards)
+
+        ---------------------------------------------------- */
+
+        .features-section {
+
+            background: #FFFFFF;
+
+            padding: 25px 0;
+
+            border-bottom: 1px solid #ECECEC;
+
+        }
+
+
+
+        .features-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 20px;
+
+        }
+
+
+
+        .feature-card {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 16px;
+
+            padding: 10px 15px;
+
+        }
+
+
+
+        .feature-icon-box {
+
+            width: 48px;
+
+            height: 48px;
+
+            border-radius: 50%;
+
+            border: 2px solid var(--porto-primary);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: var(--porto-primary);
+
+            font-size: 20px;
+
+            flex-shrink: 0;
+
+        }
+
+
+
+        .feature-text-box h4 {
+
+            font-size: 13.5px;
+
+            font-weight: 800;
+
+            color: var(--porto-secondary);
+
+            margin-bottom: 2px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.3px;
+
+        }
+
+
+
+        .feature-text-box p {
+
+            font-size: 12px;
+
+            color: var(--text-muted);
+
+            margin: 0;
+
+        }
+
+
+
+        /* ----------------------------------------------------
+
+           6. POPULAR DEPARTMENTS (4 Large Category Cards)
+
+        ---------------------------------------------------- */
+
+        .departments-section {
+
+            padding: 45px 0 35px;
+
+            background: #FFFFFF;
+
+        }
+
+
+
+        .section-header-block {
+
+            margin-bottom: 24px;
+
+        }
+
+
+
+        .section-title {
+
+            font-size: 22px;
+
+            font-weight: 800;
+
+            color: var(--porto-secondary);
+
+            margin-bottom: 4px;
+
+        }
+
+
+
+        .section-subtitle {
+
+            font-size: 13px;
+
+            color: var(--text-muted);
+
+        }
+
+
+
+        .departments-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 20px;
+
+        }
+
+
+
+        .dept-card {
+
+            background: #FFFFFF;
+
+            border: 1px solid #EBEBEB;
+
+            border-radius: var(--radius-sm);
+
+            padding: 20px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 15px;
+
+            transition: var(--transition);
+
+            cursor: pointer;
+
+            overflow: hidden;
+
+        }
+
+
+
+        .dept-card:hover {
+
+            border-color: var(--porto-primary);
+
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+
+            transform: translateY(-3px);
+
+        }
+
+
+
+        .dept-card-text h3 {
+
+            font-size: 16px;
+
+            font-weight: 800;
+
+            color: var(--porto-secondary);
+
+            margin-bottom: 4px;
+
+            transition: var(--transition);
+
+        }
+
+
+
+        .dept-card:hover .dept-card-text h3 {
+
+            color: var(--porto-primary);
+
+        }
+
+
+
+        .dept-card-text span {
+
+            font-size: 12px;
+
+            color: var(--text-muted);
+
+        }
+
+
+
+        .dept-card-img-box {
+
+            width: 90px;
+
+            height: 90px;
+
+            flex-shrink: 0;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+
+
+        .dept-card-img-box img {
+
+            max-width: 100%;
+
+            max-height: 100%;
+
+            object-fit: contain;
+
+            transition: var(--transition);
+
+        }
+
+
+
+        .dept-card:hover .dept-card-img-box img {
+
+            transform: scale(1.08);
+
+        }
+
+
+
+        /* ----------------------------------------------------
+
+           7. MOST POPULAR PRODUCTS (6 Columns with Tab Filter)
+
+        ---------------------------------------------------- */
+
+        .products-section {
+
+            padding: 35px 0 45px;
+
+            background: #FFFFFF;
+
+        }
+
+
+
+        .tabs-header-wrapper {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            flex-wrap: wrap;
+
+            gap: 15px;
+
+            margin-bottom: 28px;
+
+            border-bottom: 1px solid #ECECEC;
+
+            padding-bottom: 14px;
+
+        }
+
+
+
+        .filter-tabs-list {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+
+        .filter-tab-btn {
+
+            background: transparent;
+
+            border: 1px solid #E5E5E5;
+
+            padding: 6px 16px;
+
+            border-radius: var(--radius-sm);
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            color: var(--text-muted);
+
+            cursor: pointer;
+
+            transition: var(--transition);
+
+        }
+
+
+
+        .filter-tab-btn:hover,
+
+        .filter-tab-btn.active {
+
+            background: var(--porto-primary);
+
+            color: #FFFFFF;
+
+            border-color: var(--porto-primary);
+
+        }
+
+
+
+        .products-grid-6col {
+
+            display: grid;
+
+            grid-template-columns: repeat(6, 1fr);
+
+            gap: 18px;
+
+        }
+
+
+
+        .product-card {
+
+            background: #FFFFFF;
+
+            border: 1px solid #EBEBEB;
+
+            border-radius: var(--radius-sm);
+
+            padding: 16px 12px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            text-align: center;
+
+            position: relative;
+
+            transition: var(--transition);
+
+        }
+
+
+
+        .product-card:hover {
+
+            border-color: #D5D5D5;
+
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+        }
+
+
+
+        .product-badge-discount {
+
+            position: absolute;
+
+            top: 10px;
+
+            right: 10px;
+
+            background: var(--porto-accent);
+
+            color: #FFFFFF;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            padding: 3px 7px;
+
+            border-radius: 3px;
+
+            z-index: 2;
+
+        }
+
+
+
+        .product-img-box {
+
+            width: 100%;
+
+            height: 155px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            margin-bottom: 14px;
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+
+        .product-img-box img {
+
+            max-width: 100%;
+
+            max-height: 100%;
+
+            object-fit: contain;
+
+            transition: var(--transition);
+
+        }
+
+
+
+        .product-card:hover .product-img-box img {
+
+            transform: scale(1.06);
+
+        }
+
+
+
+        .product-cat-name {
+
+            font-size: 10.5px;
+
+            text-transform: uppercase;
+
+            color: var(--text-muted);
+
+            letter-spacing: 0.5px;
+
+            margin-bottom: 4px;
+
+        }
+
+
+
+        .product-item-title {
+
+            font-size: 13.5px;
+
+            font-weight: 700;
+
+            color: var(--porto-secondary);
+
+            margin-bottom: 6px;
+
+            line-height: 1.35;
+
+            height: 36px;
+
+            overflow: hidden;
+
+            display: -webkit-box;
+
+            -webkit-line-clamp: 2;
+
+            -webkit-box-orient: vertical;
+
+        }
+
+
+
+        .product-item-title a:hover {
+
+            color: var(--porto-primary);
+
+        }
+
+
+
+        .product-rating-stars {
+
+            color: #FFB800;
+
+            font-size: 11px;
+
+            margin-bottom: 8px;
+
+        }
+
+
+
+        .product-prices-wrap {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 8px;
+
+            font-family: 'Poppins', 'Cairo', sans-serif;
+
+            margin-bottom: 12px;
+
+        }
+
+
+
+        .price-old {
+
+            font-size: 12px;
+
+            color: var(--text-light);
+
+            text-decoration: line-through;
+
+        }
+
+
+
+        .price-current {
+
+            font-size: 15px;
+
+            font-weight: 800;
+
+            color: var(--porto-primary);
+
+        }
+
+
+
+        .btn-add-cart-mini {
+
+            background-color: #F4F6F5;
+
+            color: var(--porto-secondary);
+
+            border: 1px solid #E1E6E2;
+
+            padding: 8px;
+
+            border-radius: var(--radius-sm);
+
+            font-size: 12.5px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition: var(--transition);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 6px;
+
+            margin-top: auto;
+
+        }
+
+
+
+        .btn-add-cart-mini:hover {
+
+            background-color: var(--porto-primary);
+
+            color: #FFFFFF;
+
+            border-color: var(--porto-primary);
+
+        }
+
+
+
+        /* ----------------------------------------------------
+
+           8. THIS WEEK'S SPECIALS (Red Bordered Container)
+
+        ---------------------------------------------------- */
+
+        .weekly-specials-section {
+
+            padding: 20px 0 45px;
+
+            background: #FFFFFF;
+
+        }
+
+
+
+        .weekly-specials-box {
+
+            border: 2px solid var(--porto-accent);
+
+            border-radius: var(--radius-sm);
+
+            padding: 24px 20px 28px;
+
+            position: relative;
+
+        }
+
+
+
+        .specials-box-header {
+
+            margin-bottom: 22px;
+
+            text-align: right;
+
+        }
+
+
+
+        .specials-box-header h2 {
+
+            font-size: 22px;
+
+            font-weight: 900;
+
+            color: var(--porto-accent);
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+        }
+
+
+
+        .specials-box-header p {
+
+            font-size: 13px;
+
+            color: var(--text-muted);
+
+            margin-top: 2px;
+
+        }
+
+
+
+        /* ----------------------------------------------------
+
+           9. DUAL PROMO BANNERS (Coffee & Strawberry Jam)
+
+        ---------------------------------------------------- */
+
+        .promo-banners-section {
+
+            padding: 20px 0 50px;
+
+            background: #FFFFFF;
+
+        }
+
+
+
+        .promo-banners-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 25px;
+
+        }
+
+
+
+        .promo-banner-card {
+
+            border-radius: var(--radius-sm);
+
+            padding: 35px 30px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            position: relative;
+
+            overflow: hidden;
+
+            min-height: 220px;
+
+        }
+
+
+
+        .promo-card-coffee {
+
+            background: linear-gradient(135deg, #D4DFD9 0%, #E6EFEA 100%);
+
+        }
+
+
+
+        .promo-card-jam {
+
+            background: linear-gradient(135deg, #D5A79E 0%, #EAD4CF 100%);
+
+        }
+
+
+
+        .promo-text-content {
+
+            flex: 1;
+
+            z-index: 2;
+
+        }
+
+
+
+        .promo-text-content .promo-tag {
+
+            font-size: 11.5px;
+
+            font-weight: 800;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+            color: #555;
+
+            display: block;
+
+            margin-bottom: 6px;
+
+        }
+
+
+
+        .promo-text-content h3 {
+
+            font-size: 28px;
+
+            font-weight: 900;
+
+            color: var(--porto-secondary);
+
+            line-height: 1.2;
+
+            margin-bottom: 6px;
+
+        }
+
+
+
+        .promo-text-content .promo-sub {
+
+            font-size: 15px;
+
+            font-weight: 700;
+
+            color: #333;
+
+            letter-spacing: 0.5px;
+
+            margin-bottom: 18px;
+
+            display: block;
+
+        }
+
+
+
+        .promo-btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            background: var(--porto-secondary);
+
+            color: #FFFFFF;
+
+            padding: 10px 22px;
+
+            border-radius: var(--radius-sm);
+
+            font-size: 12.5px;
+
+            font-weight: 800;
+
+            transition: var(--transition);
+
+        }
+
+
+
+        .promo-btn:hover {
+
+            background: var(--porto-primary);
+
+            transform: translateY(-2px);
+
+        }
+
+
+
+        .promo-img-wrapper {
+
+            width: 170px;
+
+            height: 170px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            position: relative;
+
+        }
+
+
+
+        .promo-img-wrapper img {
+
+            max-width: 100%;
+
+            max-height: 100%;
+
+            object-fit: contain;
+
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.15));
+
+            transition: var(--transition);
+
+        }
+
+
+
+        .promo-banner-card:hover .promo-img-wrapper img {
+
+            transform: scale(1.08) rotate(-3deg);
+
+        }
+
+
+
+        /* ----------------------------------------------------
+
+           10. SPECIAL OFFERS & DEAL OF THE DAY (Timer + 8 Products)
+
+        ---------------------------------------------------- */
+
+        .special-offers-section {
+
+            padding: 20px 0 50px;
+
+            background: #FFFFFF;
+
+        }
+
+
+
+        .special-offers-layout {
+
+            display: grid;
+
+            grid-template-columns: 320px 1fr;
+
+            gap: 25px;
+
+        }
+
+
+
+        .deal-card-big {
+
+            border: 2px solid var(--porto-primary);
+
+            border-radius: var(--radius-sm);
+
+            padding: 24px 20px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            text-align: center;
+
+            background: #FFFFFF;
+
+            position: relative;
+
+        }
+
+
+
+        .deal-countdown-box {
+
+            background: #F4F6F5;
+
+            padding: 10px 8px;
+
+            border-radius: 4px;
+
+            margin-bottom: 18px;
+
+            text-align: center;
+
+        }
+
+
+
+        .deal-countdown-title {
+
+            font-size: 10.5px;
+
+            font-weight: 800;
+
+            color: var(--text-muted);
+
+            letter-spacing: 0.8px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 4px;
+
+        }
+
+
+
+        .countdown-digits {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 6px;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-weight: 800;
+
+            font-size: 16px;
+
+            color: var(--porto-accent);
+
+        }
+
+
+
+        .deal-big-img-box {
+
+            width: 100%;
+
+            height: 220px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            margin-bottom: 16px;
+
+            position: relative;
+
+        }
+
+
+
+        .deal-big-img-box img {
+
+            max-width: 100%;
+
+            max-height: 100%;
+
+            object-fit: contain;
+
+            transition: var(--transition);
+
+        }
+
+
+
+        .deal-card-big:hover .deal-big-img-box img {
+
+            transform: scale(1.05);
+
+        }
+
+
+
+        .deal-cat-tag {
+
+            font-size: 11px;
+
+            text-transform: uppercase;
+
+            color: var(--text-muted);
+
+            margin-bottom: 4px;
+
+        }
+
+
+
+        .deal-title {
+
+            font-size: 17px;
+
+            font-weight: 800;
+
+            color: var(--porto-secondary);
+
+            margin-bottom: 8px;
+
+        }
+
+
+
+        .deal-prices {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            font-family: 'Poppins', 'Cairo', sans-serif;
+
+            margin-bottom: 14px;
+
+        }
+
+
+
+        .deal-prices .old {
+
+            font-size: 14px;
+
+            color: var(--text-light);
+
+            text-decoration: line-through;
+
+        }
+
+
+
+        .deal-prices .now {
+
+            font-size: 20px;
+
+            font-weight: 900;
+
+            color: var(--porto-accent);
+
+        }
+
+
+
+        .deal-stock-meta {
+
+            font-size: 12px;
+
+            color: var(--text-muted);
+
+            margin-bottom: 16px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+        }
+
+
+
+        .deal-stock-meta strong {
+
+            color: var(--porto-primary);
+
+        }
+
+
+
+        .btn-add-deal {
+
+            background-color: var(--porto-primary);
+
+            color: #FFFFFF;
+
+            border: none;
+
+            padding: 12px;
+
+            border-radius: var(--radius-sm);
+
+            font-size: 14px;
+
+            font-weight: 800;
+
+            cursor: pointer;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 8px;
+
+            transition: var(--transition);
+
+            margin-top: auto;
+
+        }
+
+
+
+        .btn-add-deal:hover {
+
+            background-color: var(--porto-primary-hover);
+
+        }
+
+
+
+        .offers-grid-8col {
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 18px;
+
+        }
+
+
+
+        /* ----------------------------------------------------
+
+           11. TRUSTED BRANDS LOGOS
+
+        ---------------------------------------------------- */
+
+        .brands-section {
+
+            padding: 40px 0;
+
+            background: #FFFFFF;
+
+            border-top: 1px solid #ECECEC;
+
+            border-bottom: 1px solid #ECECEC;
+
+        }
+
+
+
+        .brands-row {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-around;
+
+            flex-wrap: wrap;
+
+            gap: 30px;
+
+            opacity: 0.65;
+
+            filter: grayscale(100%);
+
+            transition: var(--transition);
+
+        }
+
+
+
+        .brands-row:hover {
+
+            opacity: 0.95;
+
+            filter: grayscale(0%);
+
+        }
+
+
+
+        .brand-logo-item {
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 22px;
+
+            font-weight: 900;
+
+            letter-spacing: -0.5px;
+
+            color: var(--porto-secondary);
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+        }
+
+
+
+        /* ----------------------------------------------------
+
+           12. GOURMET RECIPES & BLOG CARDS
+
+        ---------------------------------------------------- */
+
+        .recipes-section {
+
+            padding: 50px 0;
+
+            background: #FFFFFF;
+
+        }
+
+
+
+        .recipes-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 30px;
+
+        }
+
+
+
+        .recipe-card {
+
+            background: #FFFFFF;
+
+            border: 1px solid #EBEBEB;
+
+            border-radius: var(--radius-sm);
+
+            overflow: hidden;
+
+            display: flex;
+
+            flex-direction: column;
+
+            transition: var(--transition);
+
+        }
+
+
+
+        .recipe-card:hover {
+
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+            transform: translateY(-3px);
+
+        }
+
+
+
+        .recipe-img-box {
+
+            width: 100%;
+
+            height: 260px;
+
+            overflow: hidden;
+
+            background: #F8FAF9;
+
+        }
+
+
+
+        .recipe-img-box img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: var(--transition);
+
+        }
+
+
+
+        .recipe-card:hover .recipe-img-box img {
+
+            transform: scale(1.05);
+
+        }
+
+
+
+        .recipe-body {
+
+            padding: 22px 24px;
+
+        }
+
+
+
+        .recipe-cat-tag {
+
+            font-size: 11.5px;
+
+            font-weight: 800;
+
+            color: var(--porto-primary);
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.5px;
+
+            display: block;
+
+            margin-bottom: 6px;
+
+        }
+
+
+
+        .recipe-title {
+
+            font-size: 20px;
+
+            font-weight: 800;
+
+            color: var(--porto-secondary);
+
+            margin-bottom: 8px;
+
+            line-height: 1.3;
+
+        }
+
+
+
+        .recipe-desc {
+
+            font-size: 13.5px;
+
+            color: var(--text-muted);
+
+            line-height: 1.6;
+
+            margin-bottom: 14px;
+
+        }
+
+
+
+        .recipe-link {
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            color: var(--porto-primary);
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 6px;
+
+        }
+
+
+
+        .recipe-link:hover {
+
+            gap: 10px;
+
+        }
+
+
+
+        /* ----------------------------------------------------
+
+           13. COMPREHENSIVE ORGANIC FOOTER
+
+        ---------------------------------------------------- */
+
+        .porto-footer {
+
+            background-color: #222529;
+
+            color: #A0A5AA;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+
+            padding: 50px 0 20px;
+
+            border-top: 4px solid var(--porto-primary);
+
+        }
+
+
+
+        .footer-newsletter-bar {
+
+            background-color: #2B2F34;
+
+            border-radius: var(--radius-sm);
+
+            padding: 24px 30px;
+
+            margin-bottom: 45px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            flex-wrap: wrap;
+
+            gap: 20px;
+
+        }
+
+
+
+        .newsletter-text-box h4 {
+
+            color: #FFFFFF;
+
+            font-size: 17px;
+
+            font-weight: 800;
+
+            margin-bottom: 4px;
+
+        }
+
+
+
+        .newsletter-text-box p {
+
+            color: #A0A5AA;
+
+            font-size: 12.5px;
+
+            margin: 0;
+
+        }
+
+
+
+        .newsletter-form-box {
+
+            display: flex;
+
+            align-items: center;
+
+            flex: 1;
+
+            max-width: 440px;
+
+            border-radius: 4px;
+
+            overflow: hidden;
+
+            background: #FFFFFF;
+
+        }
+
+
+
+        .newsletter-input-field {
+
+            flex: 1;
+
+            border: none;
+
+            outline: none;
+
+            padding: 10px 18px;
+
+            font-size: 13px;
+
+            color: var(--text-main);
+
+        }
+
+
+
+        .newsletter-submit-btn {
+
+            background: var(--porto-primary);
+
+            color: #FFFFFF;
+
+            border: none;
+
+            padding: 10px 22px;
+
+            font-weight: 800;
+
+            font-size: 13px;
+
+            cursor: pointer;
+
+            transition: var(--transition);
+
+        }
+
+
+
+        .newsletter-submit-btn:hover {
+
+            background: var(--porto-primary-hover);
+
+        }
+
+
+
+        .footer-cols-grid {
+
+            display: grid;
+
+            grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+
+            gap: 24px;
+
+            margin-bottom: 40px;
+
+        }
+
+
+
+        .footer-col h5 {
+
+            color: #FFFFFF;
+
+            font-size: 14.5px;
+
+            font-weight: 800;
+
+            margin-bottom: 18px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.5px;
+
+        }
+
+
+
+        .footer-links-list li {
+
+            margin-bottom: 10px;
+
+        }
+
+
+
+        .footer-links-list a {
+
+            color: #A0A5AA;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            transition: var(--transition);
+
+        }
+
+
+
+        .footer-links-list a:hover {
+
+            color: #FFFFFF;
+
+            padding-right: 4px;
+
+        }
+
+
+
+        .footer-bottom-bar {
+
+            border-top: 1px solid #2F343A;
+
+            padding-top: 22px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            flex-wrap: wrap;
+
+            gap: 15px;
+
+            font-size: 12.5px;
+
+        }
+
+
+
+        /* ----------------------------------------------------
+
+           14. CART DRAWER & TOAST NOTIFICATION
+
+        ---------------------------------------------------- */
+
+        .cart-drawer-overlay {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100vw;
+
+            height: 100vh;
+
+            background: rgba(0, 0, 0, 0.5);
+
+            z-index: 999;
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            transition: var(--transition);
+
+        }
+
+
+
+        .cart-drawer-overlay.active {
+
+            opacity: 1;
+
+            visibility: visible;
+
+        }
+
+
+
+        .cart-drawer-panel {
+
+            position: fixed;
+
+            top: 0;
+
+            left: -400px;
+
+            width: 380px;
+
+            max-width: 90vw;
+
+            height: 100vh;
+
+            background: #FFFFFF;
+
+            z-index: 1000;
+
+            box-shadow: 5px 0 25px rgba(0,0,0,0.2);
+
+            display: flex;
+
+            flex-direction: column;
+
+            transition: left 0.3s ease-in-out;
+
+        }
+
+
+
+        .cart-drawer-panel.active {
+
+            left: 0;
+
+        }
+
+
+
+        .drawer-header {
+
+            padding: 18px 20px;
+
+            background: var(--porto-secondary);
+
+            color: #FFFFFF;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+        }
+
+
+
+        .drawer-header h3 {
+
+            font-size: 16px;
+
+            font-weight: 800;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+        }
+
+
+
+        .drawer-close-btn {
+
+            background: transparent;
+
+            border: none;
+
+            color: #FFFFFF;
+
+            font-size: 20px;
+
+            cursor: pointer;
+
+        }
+
+
+
+        .drawer-items-list {
+
+            flex: 1;
+
+            overflow-y: auto;
+
+            padding: 20px;
+
+        }
+
+
+
+        .drawer-item-row {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 14px;
+
+            padding-bottom: 14px;
+
+            margin-bottom: 14px;
+
+            border-bottom: 1px solid #ECECEC;
+
+        }
+
+
+
+        .drawer-item-img {
+
+            width: 60px;
+
+            height: 60px;
+
+            object-fit: contain;
+
+            border: 1px solid #EEE;
+
+            border-radius: 4px;
+
+            padding: 4px;
+
+        }
+
+
+
+        .drawer-item-info {
+
+            flex: 1;
+
+        }
+
+
+
+        .drawer-item-title {
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            color: var(--porto-secondary);
+
+            line-height: 1.3;
+
+            margin-bottom: 4px;
+
+        }
+
+
+
+        .drawer-item-price {
+
+            font-size: 13.5px;
+
+            font-weight: 800;
+
+            color: var(--porto-primary);
+
+        }
+
+
+
+        .drawer-remove-btn {
+
+            background: transparent;
+
+            border: none;
+
+            color: #999;
+
+            cursor: pointer;
+
+            font-size: 15px;
+
+            padding: 4px;
+
+        }
+
+
+
+        .drawer-remove-btn:hover {
+
+            color: var(--porto-accent);
+
+        }
+
+
+
+        .drawer-footer {
+
+            padding: 20px;
+
+            border-top: 1px solid #ECECEC;
+
+            background: #FBFBFB;
+
+        }
+
+
+
+        .drawer-subtotal-row {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            font-size: 15px;
+
+            font-weight: 800;
+
+            margin-bottom: 16px;
+
+        }
+
+
+
+        .drawer-subtotal-val {
+
+            font-size: 18px;
+
+            color: var(--porto-primary);
+
+        }
+
+
+
+        .btn-checkout-drawer {
+
+            width: 100%;
+
+            background: var(--porto-primary);
+
+            color: #FFFFFF;
+
+            border: none;
+
+            padding: 13px;
+
+            border-radius: 4px;
+
+            font-size: 14px;
+
+            font-weight: 800;
+
+            cursor: pointer;
+
+            transition: var(--transition);
+
+        }
+
+
+
+        .btn-checkout-drawer:hover {
+
+            background: var(--porto-primary-hover);
+
+        }
+
+
+
+        /* Toast notification */
+
+        .toast-notify {
+
+            position: fixed;
+
+            bottom: 25px;
+
+            right: 25px;
+
+            background: var(--porto-secondary);
+
+            color: #FFFFFF;
+
+            padding: 12px 22px;
+
+            border-radius: 4px;
+
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+
+            font-size: 13.5px;
+
+            font-weight: 700;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            z-index: 10000;
+
+            transform: translateY(100px);
+
+            opacity: 0;
+
+            transition: all 0.3s ease;
+
+            pointer-events: none;
+
+        }
+
+
+
+        .toast-notify.show {
+
+            transform: translateY(0);
+
+            opacity: 1;
+
+        }
+
+
+
+        .toast-notify i {
+
+            color: var(--porto-primary);
+
+            font-size: 17px;
+
+        }
+
+
+
+        /* ----------------------------------------------------
+
+           15. MOBILE NAVIGATION & RESPONSIVE BREAKPOINTS
+
+        ---------------------------------------------------- */
+
+        .mobile-header-bar {
+
+            display: none;
+
+            background: #FFFFFF;
+
+            padding: 12px 15px;
+
+            border-bottom: 1px solid #ECECEC;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+        }
+
+
+
+        .mobile-bottom-nav {
+
+            display: none;
+
+            position: fixed;
+
+            bottom: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            background: #FFFFFF;
+
+            border-top: 1px solid #ECECEC;
+
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.06);
+
+            z-index: 900;
+
+            padding: 8px 0;
+
+        }
+
+
+
+        .mob-nav-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            text-align: center;
+
+        }
+
+
+
+        .mob-nav-item {
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            gap: 3px;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            color: var(--text-muted);
+
+            position: relative;
+
+        }
+
+
+
+        .mob-nav-item i {
+
+            font-size: 18px;
+
+        }
+
+
+
+        .mob-nav-item.active,
+
+        .mob-nav-item:hover {
+
+            color: var(--porto-primary);
+
+        }
+
+
+
+        @media (max-width: 991px) {
+
+            .porto-topbar,
+
+            .porto-header,
+
+            .porto-navbar {
+
+                display: none;
+
+            }
+
+
+
+            .mobile-header-bar,
+
+            .mobile-bottom-nav {
+
+                display: flex;
+
+            }
+
+
+
+            .features-grid {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+
+
+            .departments-grid {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+
+
+            .products-grid-6col {
+
+                grid-template-columns: repeat(3, 1fr);
+
+            }
+
+
+
+            .special-offers-layout {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+
+            .offers-grid-8col {
+
+                grid-template-columns: repeat(3, 1fr);
+
+            }
+
+
+
+            .footer-cols-grid {
+
+                grid-template-columns: 1fr 1fr;
+
+            }
+
+
+
+            .hero-inner {
+
+                flex-direction: column-reverse;
+
+                text-align: center;
+
+                padding-top: 10px;
+
+            }
+
+
+
+            .hero-content-col {
+
+                max-width: 100%;
+
+            }
+
+
+
+            .hero-cta-group {
+
+                justify-content: center;
+
+            }
+
+
+
+            .hero-main-img {
+
+                max-height: 300px;
+
+            }
+
+        }
+
+
+
+        @media (max-width: 600px) {
+
+            .features-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+
+            .departments-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+
+            .products-grid-6col {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+
+
+            .promo-banners-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+
+            .offers-grid-8col {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+
+
+            .recipes-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+
+            .footer-cols-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+
+            .hero-title {
+
+                font-size: 32px;
+
+            }
+
+        }
+
+    

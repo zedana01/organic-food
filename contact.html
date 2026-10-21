@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا | خدمة عملاء بورتو أورجانيك</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- 1. TOP BAR -->
+    <div class="porto-topbar">
+        <div class="container">
+            <div class="topbar-inner">
+                <div class="topbar-msg">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <span>توصيل مجاني سريع لجميع الطلبات العضوية فوق 99 ر.س</span>
+                </div>
+                <div class="topbar-links">
+                    <a href="admin/index.html" style="color:#3FA163; font-weight:800;"><i class="fa-solid fa-lock"></i> لوحة الإدارة</a>
+                    <a href="contact.html"><i class="fa-solid fa-location-dot"></i> فروعنا</a>
+                    <a href="about.html"><i class="fa-solid fa-leaf"></i> عن المتجر</a>
+                    <a href="javascript:void(0)" onclick="toggleCartDrawer()"><i class="fa-solid fa-basket-shopping"></i> السلة</a>
+                    <div class="topbar-socials">
+                        <a href="https://wa.me/201027093535" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. MAIN HEADER -->
+    <header class="porto-header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="header-logo">
+                    <div class="logo-text-box">
+                        <h1>PORTO</h1>
+                        <span>ORGANIC MARKET</span>
+                    </div>
+                </a>
+
+                <form class="header-search-form" action="shop.html" method="GET">
+                    <select class="search-category-select" name="cat">
+                        <option value="all">جميع الأقسام</option>
+                        <option value="veg">الخضروات العضوية</option>
+                        <option value="fruits">الفواكه الطازجة</option>
+                        <option value="bakery">المخبوزات والإفطار</option>
+                        <option value="cooking">المؤونة وتوابل</option>
+                        <option value="meat">لحوم ودواجن المراعي</option>
+                    </select>
+                    <input type="text" name="q" id="searchInput" class="search-input-field" placeholder="ابحث عن خضار، فواكه، بن عضوي، عسل...">
+                    <button type="submit" class="search-submit-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+
+                <div class="header-user-actions">
+                    <div class="user-account-box" onclick="showToast('مرحباً بك في بورتو أورجانيك! خدمة العملاء: 9200 99 888')">
+                        <i class="fa-regular fa-user"></i>
+                        <div class="user-account-text">
+                            <span>مرحباً بك</span>
+                            <strong>خدمة العملاء 24/7</strong>
+                        </div>
+                    </div>
+
+                    <div class="header-cart-box" onclick="toggleCartDrawer()" style="cursor:pointer;" title="عرض سلة المشتريات">
+                        <div class="cart-icon-wrapper">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                            <span class="cart-badge-count" id="headerCartCount">0</span>
+                        </div>
+                        <div class="cart-info-text">
+                            <span class="cart-info-label">سلة التسوق</span>
+                            <span class="cart-info-total" id="headerCartTotal">0.00 ر.س</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. NAVIGATION BAR -->
+    <nav class="porto-navbar">
+        <div class="container">
+            <div class="navbar-inner">
+                <div class="nav-links-menu">
+                    <a href="index.html" class="nav-item-link "><i class="fa-solid fa-house" style="margin-left:6px;"></i> الرئيسية</a>
+                    <a href="shop.html" class="nav-item-link ">المتجر الكامل</a>
+                    <a href="category.html?cat=veg" class="nav-item-link ">خضروات عضوية</a>
+                    <a href="category.html?cat=fruits" class="nav-item-link ">فواكه طازجة</a>
+                    <a href="category.html?cat=bakery" class="nav-item-link ">مخبوزات وإفطار</a>
+                    <a href="category.html?cat=cooking" class="nav-item-link ">مؤونة وتوابل</a>
+                    <a href="category.html?cat=meat" class="nav-item-link ">لحوم المراعي</a>
+                    <a href="about.html" class="nav-item-link ">عن المتجر</a>
+                    <a href="contact.html" class="nav-item-link active">اتصل بنا</a>
+                </div>
+
+                <div class="nav-special-deal">
+                    <a href="shop.html?filter=deals"><i class="fa-solid fa-percent" style="margin-left:6px; color:#FFA000;"></i> عروض الأسبوع التوفيرية</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <main class="container" style="padding-top:40px; margin-bottom:70px;">
+        <div style="text-align:center; margin-bottom:40px;">
+            <span style="color:var(--porto-primary); font-weight:800; font-size:13px;">يسعدنا تواصلكم دائماً</span>
+            <h1 style="font-size:32px; font-weight:900; color:#222529; margin:6px 0;">خدمة عملاء بورتو أورجانيك</h1>
+            <p style="font-size:15px; color:#666;">فريق خدمة العملاء جاهز للرد على استفساراتكم وتنسيق مواعيد الشحن المبرد</p>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1.3fr; gap:40px;">
+            <div style="background:#F9FBF9; border:1px solid #E0EBE1; border-radius:8px; padding:30px;">
+                <h3 style="font-size:20px; font-weight:900; color:#222529; margin-bottom:20px;">بيانات الاتصال المباشر</h3>
+                
+                <div style="display:flex; align-items:flex-start; gap:15px; margin-bottom:20px;">
+                    <div style="width:44px; height:44px; background:#E8F5E9; color:#2E7D32; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:18px;"><i class="fa-solid fa-phone"></i></div>
+                    <div>
+                        <div style="font-size:12px; color:#888; font-weight:700;">الرقم الموحد المجاني</div>
+                        <div style="font-size:16px; font-weight:800; color:#222529;">9200 99 888</div>
+                    </div>
+                </div>
+
+                <div style="display:flex; align-items:flex-start; gap:15px; margin-bottom:20px;">
+                    <div style="width:44px; height:44px; background:#E8FDF0; color:#25D366; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:18px;"><i class="fa-brands fa-whatsapp"></i></div>
+                    <div>
+                        <div style="font-size:12px; color:#888; font-weight:700;">واتساب خدمة العملاء والطلبات</div>
+                        <div style="font-size:16px; font-weight:800; color:#222529;">01027093535</div>
+                    </div>
+                </div>
+
+                <div style="display:flex; align-items:flex-start; gap:15px; margin-bottom:20px;">
+                    <div style="width:44px; height:44px; background:#E8F5E9; color:#2E7D32; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:18px;"><i class="fa-solid fa-location-dot"></i></div>
+                    <div>
+                        <div style="font-size:12px; color:#888; font-weight:700;">الفرع الرئيسي والمستودع المبرد</div>
+                        <div style="font-size:14px; font-weight:700; color:#222529;">الرياض - حي الياسمين، طريق أنس بن مالك</div>
+                    </div>
+                </div>
+
+                <a href="https://wa.me/201027093535" target="_blank" style="display:flex; align-items:center; justify-content:center; gap:8px; background:#25D366; color:#fff; padding:12px 20px; border-radius:6px; font-weight:800; text-decoration:none; margin-top:10px;">
+                    <i class="fa-brands fa-whatsapp" style="font-size:20px;"></i>
+                    <span>محادثة واتساب مباشرة</span>
+                </a>
+            </div>
+
+            <div style="background:#fff; border:1px solid #E0EBE1; border-radius:8px; padding:30px;">
+                <h3 style="font-size:20px; font-weight:900; color:#222529; margin-bottom:10px;">أرسل استفسارك</h3>
+                <p style="font-size:13.5px; color:#666; margin-bottom:20px;">سنقوم بالرد عليك خلال أقل من ساعة عمل</p>
+
+                <form onsubmit="event.preventDefault(); showToast('تم إرسال رسالتك بنجاح! شكراً لتواصلك.'); this.reset();">
+                    <input type="text" placeholder="الاسم الكريم *" required style="width:100%; padding:11px 14px; border-radius:4px; border:1px solid #CCC; margin-bottom:14px; font-family:inherit; outline:none;">
+                    <input type="tel" placeholder="رقم الجوال أو الواتساب *" required style="width:100%; padding:11px 14px; border-radius:4px; border:1px solid #CCC; margin-bottom:14px; font-family:inherit; outline:none;">
+                    <textarea rows="4" placeholder="اكتب استفسارك هنا..." required style="width:100%; padding:11px 14px; border-radius:4px; border:1px solid #CCC; margin-bottom:14px; font-family:inherit; outline:none; resize:vertical;"></textarea>
+                    <button type="submit" style="width:100%; background:var(--porto-primary); color:#fff; border:none; padding:12px; border-radius:4px; font-weight:800; font-size:15px; cursor:pointer;">إرسال الرسالة</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- 13. COMPREHENSIVE ORGANIC FOOTER -->
+    <footer class="porto-footer" id="footer">
+        <div class="container">
+            <div class="footer-newsletter-bar">
+                <div class="newsletter-text-box">
+                    <h4>اشترك في نشرتنا البريدية واحصل على خصم 15%</h4>
+                    <p>كن أول من يعلم بوصول المحاصيل العضوية الأسبوعية والعروض الحصرية</p>
+                </div>
+                <form class="newsletter-form-box" onsubmit="event.preventDefault(); subscribeNewsletter();">
+                    <input type="email" id="newsletterEmail" class="newsletter-input-field" placeholder="أدخل بريدك الإلكتروني..." required>
+                    <button type="submit" class="newsletter-submit-btn">اشترك الآن</button>
+                </form>
+            </div>
+
+            <div class="footer-cols-grid">
+                <div class="footer-col">
+                    <h5>عن بورتو أورجانيك</h5>
+                    <p style="margin-bottom:14px; color:#A0A5AA; line-height:1.7;">
+                        وجهتكم الأولى في المملكة للأغذية العضوية المعتمدة، الفواكه والخضروات الطازجة يومياً، والبن المختص ومؤونة المطبخ الفاخرة بأعلى معايير النظافة والجودة.
+                    </p>
+                    <p><i class="fa-solid fa-phone" style="color:var(--porto-primary); margin-left:8px;"></i> <strong>9200 99 888</strong></p>
+                    <p><i class="fa-solid fa-envelope" style="color:var(--porto-primary); margin-left:8px;"></i> care@porto-organic.sa</p>
+                </div>
+
+                <div class="footer-col">
+                    <h5>روابط تهمك</h5>
+                    <ul class="footer-links-list">
+                        <li><a href="admin/index.html"><i class="fa-solid fa-lock" style="color:var(--porto-primary); margin-left:6px;"></i> دخول إدارة المتجر (Admin)</a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-angle-left"></i> عن المتجر ورؤيتنا</a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-angle-left"></i> شهادات الجودة العضوية</a></li>
+                        <li><a href="contact.html"><i class="fa-solid fa-angle-left"></i> سياسة الشحن والتوصيل المبرد</a></li>
+                        <li><a href="contact.html"><i class="fa-solid fa-angle-left"></i> الضمان والاستبدال الفوري</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>أقسام التسوق</h5>
+                    <ul class="footer-links-list">
+                        <li><a href="category.html?cat=veg"><i class="fa-solid fa-angle-left"></i> الخضروات العضوية الطازجة</a></li>
+                        <li><a href="category.html?cat=fruits"><i class="fa-solid fa-angle-left"></i> الفواكه الموسمية المستوردة والمحلية</a></li>
+                        <li><a href="category.html?cat=bakery"><i class="fa-solid fa-angle-left"></i> مخبوزات وعسل طبيعي</a></li>
+                        <li><a href="category.html?cat=meat"><i class="fa-solid fa-angle-left"></i> لحوم ودواجن المراعي المفتوحة</a></li>
+                        <li><a href="category.html?cat=cooking"><i class="fa-solid fa-angle-left"></i> بن مختص وتوابل فاخرة</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>تواصلي وخدمة العملاء</h5>
+                    <p style="color:#A0A5AA; margin-bottom:14px; line-height:1.6;">الرياض - حي الياسمين، طريق أنس بن مالك. نوصل لكافة مدن المملكة عبر سيارات مبردة مجهزة.</p>
+                    <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:18px;">
+                        <a href="https://wa.me/201027093535" target="_blank" style="background:#25D366; padding:10px 14px; border-radius:4px; display:flex; align-items:center; justify-content:center; gap:10px; color:#FFF; font-weight:700; text-decoration:none;">
+                            <i class="fa-brands fa-whatsapp" style="font-size:20px;"></i>
+                            <span>طلب سريع عبر واتساب: 01027093535</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom-bar">
+                <p>© 2026 جميع الحقوق محفوظة - متجر بورتو أورجانيك (Porto Organic Shop 35) | تم التطوير بدقة واحترافية</p>
+                <div style="display:flex; align-items:center; gap:12px; font-size:20px; color:#AAA;">
+                    <i class="fa-brands fa-cc-visa" title="Visa"></i>
+                    <i class="fa-brands fa-cc-mastercard" title="Mastercard"></i>
+                    <i class="fa-brands fa-apple-pay" title="Apple Pay"></i>
+                    <span style="font-size:11px; font-weight:800; border:1px solid #777; padding:1px 6px; border-radius:3px;">مدى MADA</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CART SLIDE-OUT DRAWER -->
+    <div class="cart-drawer-overlay" id="drawerOverlay" onclick="toggleCartDrawer()"></div>
+    <div class="cart-drawer-panel" id="cartDrawer">
+        <div class="drawer-header">
+            <h3><i class="fa-solid fa-basket-shopping" style="color:var(--porto-primary);"></i> سلة المشتريات العضوية (<span id="drawerItemsCount">0</span>)</h3>
+            <button class="drawer-close-btn" onclick="toggleCartDrawer()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="drawer-items-list" id="drawerItemsList"></div>
+        <div class="drawer-footer-checkout">
+            <div class="drawer-subtotal-box">
+                <span>المجموع الفرعي:</span>
+                <strong id="drawerSubtotal" style="color:var(--porto-primary); font-size:18px;">0.00 ر.س</strong>
+            </div>
+            <div style="font-size:12px; color:#2E7D32; background:#E8F5E9; padding:6px 10px; border-radius:4px; margin-bottom:12px; display:flex; align-items:center; gap:6px;">
+                <i class="fa-solid fa-snowflake"></i>
+                <span>توصيل مبرد يضمن الحفاظ على الطزاجة 100%</span>
+            </div>
+            <button onclick="proceedOrganicWhatsAppCheckout()" class="btn-checkout-submit" style="width:100%; background:#25D366; color:#fff; border:none; padding:12px; border-radius:4px; font-weight:800; font-size:15px; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:8px;">
+                <i class="fa-brands fa-whatsapp" style="font-size:20px;"></i>
+                <span>إتمام الطلب عبر واتساب</span>
+            </button>
+            <button onclick="toggleCartDrawer()" style="width:100%; background:none; border:1px solid #CCC; color:#555; padding:8px; border-radius:4px; font-weight:700; font-size:13px; margin-top:8px; cursor:pointer;">
+                متابعة التسوق
+            </button>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/201027093535" target="_blank" class="furn-floating-whatsapp" style="position:fixed; bottom:25px; right:25px; width:60px; height:60px; background:#25D366; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:32px; box-shadow:0 8px 25px rgba(37,211,102,0.4); z-index:9999; text-decoration:none;" title="تواصل معنا عبر واتساب">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="js/store.js"></script>
+
+</body>
+</html>
