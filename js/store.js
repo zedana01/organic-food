@@ -349,35 +349,39 @@ function addToCart(arg1, arg2, arg3, arg4, arg5, arg6) {
 }
 
 
-// 9. MOBILE MENU DRAWER
+
+
+// 9. MOBILE MENU DRAWER (Robust implementation)
 function toggleMobileMenu() {
     const drawer = document.getElementById('mobileMenuDrawer');
     const overlay = document.getElementById('mobileDrawerOverlay');
-    if (drawer && overlay) {
-        drawer.classList.toggle('active');
-        overlay.classList.toggle('active');
-        if (drawer.classList.contains('active')) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = '';
-        }
+    if (!drawer) return;
+    
+    const isOpen = drawer.classList.contains('active');
+    if (isOpen) {
+        drawer.classList.remove('active');
+        if (overlay) overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    } else {
+        drawer.classList.add('active');
+        if (overlay) overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
     }
 }
 
 function closeMobileMenu() {
     const drawer = document.getElementById('mobileMenuDrawer');
     const overlay = document.getElementById('mobileDrawerOverlay');
-    if (drawer && overlay) {
-        drawer.classList.remove('active');
-        overlay.classList.remove('active');
-        document.body.style.overflow = '';
-    }
+    if (drawer) drawer.classList.remove('active');
+    if (overlay) overlay.classList.remove('active');
+    document.body.style.overflow = '';
 }
 
 function triggerMobileSearch() {
     const input = document.getElementById('mobSearchInput');
     const q = input ? input.value.trim() : '';
     if (q) {
+        closeMobileMenu();
         window.location.href = 'shop.html?q=' + encodeURIComponent(q);
     }
 }

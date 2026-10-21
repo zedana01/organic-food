@@ -188,6 +188,23 @@
         }
         .btn-view-card:hover { background: #2E7D32; color: #fff; }
     </style>
+    <script>
+        function toggleMobileMenu() {
+            var d = document.getElementById('mobileMenuDrawer');
+            var o = document.getElementById('mobileDrawerOverlay');
+            if (!d) return;
+            d.classList.toggle('active');
+            if (o) o.classList.toggle('active');
+            document.body.style.overflow = d.classList.contains('active') ? 'hidden' : '';
+        }
+        function closeMobileMenu() {
+            var d = document.getElementById('mobileMenuDrawer');
+            var o = document.getElementById('mobileDrawerOverlay');
+            if (d) d.classList.remove('active');
+            if (o) o.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    </script>
 </head>
 <body>
 
@@ -277,6 +294,24 @@
         <div style="position:relative; cursor:pointer;" onclick="toggleCartDrawer()" title="سلة التسوق">
             <i class="fa-solid fa-basket-shopping" style="font-size:22px; color:var(--porto-secondary);"></i>
             <span class="cart-badge-count" id="mobCartCount">0</span>
+        </div>
+    </div>
+
+    <!-- MOBILE SUB-BAR (Direct Mobile Menu Strip) -->
+    <div class="mobile-sub-bar">
+        <button class="mob-sub-dept-btn" onclick="toggleMobileMenu()" type="button">
+            <i class="fa-solid fa-bars"></i>
+            <span>الأقسام</span>
+        </button>
+        <div class="mob-sub-links-scroll">
+            <a href="index.html" class="">الرئيسية</a>
+            <a href="shop.html" class="">المتجر</a>
+            <a href="category.html?cat=veg" class="active">الخضروات</a>
+            <a href="category.html?cat=fruits">الفواكه</a>
+            <a href="category.html?cat=bakery">المخبوزات</a>
+            <a href="category.html?cat=cooking">المؤونة</a>
+            <a href="category.html?cat=meat">اللحوم</a>
+            <a href="shop.html?filter=deals" class="mob-deal-chip"><i class="fa-solid fa-fire"></i> العروض</a>
         </div>
     </div>
 

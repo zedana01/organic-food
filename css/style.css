@@ -3579,9 +3579,77 @@
 
     
 
+
+
 /* ====================================================
-   MOBILE MENU DRAWER & NAVIGATION BAR STYLES
+   MOBILE HEADER, SUB-BAR & DRAWER SYSTEM (100% FIXED)
    ==================================================== */
+.mobile-sub-bar {
+    display: none;
+    background: #1D2124;
+    padding: 7px 12px;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 2px solid var(--porto-primary);
+    overflow: hidden;
+}
+
+.mob-sub-dept-btn {
+    background: var(--porto-primary);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 12.5px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    flex-shrink: 0;
+    font-family: 'Cairo', sans-serif;
+    transition: background 0.2s;
+}
+.mob-sub-dept-btn:hover, .mob-sub-dept-btn:active {
+    background: #328350;
+}
+
+.mob-sub-links-scroll {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 2px 0;
+}
+.mob-sub-links-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.mob-sub-links-scroll a {
+    color: #E2E8F0;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 4px 10px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.09);
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+.mob-sub-links-scroll a.active,
+.mob-sub-links-scroll a:hover {
+    background: var(--porto-primary);
+    color: #FFFFFF;
+}
+.mob-sub-links-scroll a.mob-deal-chip {
+    background: #D84315;
+    color: #FFF;
+    font-weight: 800;
+}
+
 .dept-dropdown-wrapper.open .dept-menu {
     display: flex !important;
 }
@@ -3590,37 +3658,45 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 99998;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 999998;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
     backdrop-filter: blur(2px);
 }
 .mobile-menu-overlay.active {
-    opacity: 1;
-    visibility: visible;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
+
 .mobile-menu-drawer {
     position: fixed;
     top: 0;
-    right: -320px;
+    right: 0;
+    left: auto;
     width: 310px;
-    max-width: 86vw;
-    height: 100%;
+    max-width: 85vw;
+    height: 100vh;
     background: #FFFFFF;
-    z-index: 99999;
-    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.2);
+    z-index: 999999;
+    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
-    transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(105%);
+    -webkit-transform: translateX(105%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 .mobile-menu-drawer.active {
-    right: 0;
+    transform: translateX(0) !important;
+    -webkit-transform: translateX(0) !important;
 }
+
 .mob-drawer-header {
     display: flex;
     align-items: center;
@@ -3653,13 +3729,13 @@
     background: #FAFAFA;
 }
 .mob-drawer-body {
-    padding: 16px 18px 60px;
+    padding: 16px 18px 70px;
     flex: 1;
 }
 .mob-section-title {
     font-size: 12px;
     font-weight: 800;
-    color: #888;
+    color: #777;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-bottom: 10px;
@@ -3695,8 +3771,36 @@
     font-size: 22px;
     cursor: pointer;
     color: var(--porto-secondary);
-    padding: 4px 8px;
+    padding: 6px 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media (max-width: 991px) {
+    .porto-topbar,
+    .porto-header,
+    .porto-navbar {
+        display: none !important;
+    }
+    .mobile-header-bar {
+        display: flex !important;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        background: #FFFFFF;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+    .mobile-sub-bar {
+        display: flex !important;
+        position: sticky;
+        top: 50px;
+        z-index: 998;
+    }
+    .mobile-bottom-nav {
+        display: flex !important;
+    }
+    body {
+        padding-bottom: 65px;
+    }
 }
